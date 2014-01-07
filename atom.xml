@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-07T16:23:49+08:00</updated>
+  <updated>2014-01-07T17:46:35+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[When Can We Omit the Ampersand While Calling a Subroutine]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine/"/>
+    <updated>2014-01-07T16:39:30+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine</id>
+    <content type="html"><![CDATA[<p>If the compiler sees the subroutine definition before invocation, or if Perl can tell from the syntax that it’s a subroutine call, the subroutine can be called without an ampersand, just like a built-in function.</p>
+]]></content>
+  </entry>
   
 </feed>
