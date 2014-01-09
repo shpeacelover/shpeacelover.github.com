@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-09T20:59:00+08:00</updated>
+  <updated>2014-01-09T21:06:46+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -188,15 +188,6 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Notes for Learning Php Beyond the Basics]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/08/24/notes-for-learning-php-beyond-the-basics/"/>
-    <updated>2013-08-24T10:12:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/08/24/notes-for-learning-php-beyond-the-basics</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Oop in PHP]]></title>
     <link href="http://shpeacelover.github.io/blog/2013/08/23/oop-in-php/"/>
     <updated>2013-08-23T20:47:00+08:00</updated>
@@ -308,34 +299,12 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Notes for PHP]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/08/22/notes-for-php/"/>
-    <updated>2013-08-22T14:38:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/08/22/notes-for-php</id>
-    <content type="html"><![CDATA[<ol>
-<li><p>flock() does not work with NFS or other networked file systems. It also does not work with older file systems that do not support locking, such as FAT. On some operating systems, it is implemented at the process level and does not work correctly if you are using a multithreaded server API.</p></li>
-<li></li>
-</ol>
-
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Some Random Notes About Life and Work]]></title>
     <link href="http://shpeacelover.github.io/blog/2013/08/21/some-random-notes-about-life-and-work/"/>
     <updated>2013-08-21T10:51:00+08:00</updated>
     <id>http://shpeacelover.github.io/blog/2013/08/21/some-random-notes-about-life-and-work</id>
     <content type="html"><![CDATA[<p>Spent a lot of time last night and this morning to midify the theme of my blog to make it looks better without success.
 What a shame!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning Perl Notes]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/08/20/learning-perl-notes/"/>
-    <updated>2013-08-20T10:02:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/08/20/learning-perl-notes</id>
-    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
@@ -418,6 +387,104 @@ What a shame!</p>
 <p>虽然如此， 但是自己也已经啃了这些硬骨头有段日子了。 虽然很多东西仍然不甚了解， 但是如果不坚持下去， 就会又是只知道个皮毛。 那就又等于浪费了很多宝贵的时间去做无用功了。</p>
 
 <p>告诉自己，必须坚持下去， 多思考，多看书， 多编程。 会有结果的。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[奋斗]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/08/05/fen-dou/"/>
+    <updated>2013-08-05T17:13:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/08/05/fen-dou</id>
+    <content type="html"><![CDATA[<p>偶尔的心灰意冷算得了什么？人生短短几十载，吃点苦， 受点累又怎样？ 如果年轻时不努力奋进，难道等到进了天堂后再去忏悔？</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Country Road]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/07/23/country-road/"/>
+    <updated>2013-07-23T21:20:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/07/23/country-road</id>
+    <content type="html"><![CDATA[<p>Almost heaven, my hometown</p>
+
+<p>To me as a child</p>
+
+<p>Boundless  farmland</p>
+
+<p>Smooth brook</p>
+
+<p>Life is old there</p>
+
+<p>Older than the trees</p>
+
+<p>Younger than the mountains</p>
+
+<p>Growin&#8217; like a breeze</p>
+
+<p>Country Roads, take me home</p>
+
+<p>To the place I belong</p>
+
+<p>Like I never go beyond</p>
+
+<p>Being innocent and having fun</p>
+
+<p>(This is one I modified from John Denver&rsquo;s &ldquo;Take Me Home, Country Roads&rdquo; to reminisce my long passed childhood.)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git常用命令]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/07/23/gitchang-yong-ming-ling/"/>
+    <updated>2013-07-23T18:55:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/07/23/gitchang-yong-ming-ling</id>
+    <content type="html"><![CDATA[<p>以下是自己常用到的git命令:</p>
+
+<p>git init<br/>
+git add .<br/>
+git commit -a -m &lsquo;comment&rsquo; <br/>
+git checkout . <br/>
+git stauts <br/>
+git remote add origin ssh://user@host/~/git/depot.git  <br/>
+git push origin master    <br/>
+git clone some-repository some-path   <br/>
+git clone &mdash;depth 50 some-repository   <br/>
+git add -u|&mdash;update      <br/>
+git add -A|&mdash;all    <br/>
+git commit -m &ldquo;Some message&rdquo; -a                 (****this will commit all modified files)</p>
+
+<p>Unstage a modified file that’s been staged.<br/>
+For example, to undo changes to cache.py, use this:   <br/>
+prompt> git reset HEAD &mdash; cache.py</p>
+
+<p>Undo all uncommitted changes to a file.   <br/>
+prompt> git checkout &mdash; cache.py</p>
+
+<p>git config credential.helper &lsquo;cache &mdash;timeout=3600&rsquo;
+(the above will cache our password)</p>
+
+<p>git brach new  <br/>
+git checkout new  <br/>
+git checkout -b new</p>
+
+<p>to view all local branches:  <br/>
+git branch   <br/>
+to iew all remote branches:   <br/>
+git branch -r    <br/>
+to view all branches:   <br/>
+git branch -a      <br/>
+to view all that are or are not merged into the current branch :  <br/>
+git branch &mdash;merged  <br/>
+git branch &mdash;no-merged</p>
+
+<p>Merge changes from development to the master branch:  <br/>
+git checkout master    <br/>
+git merge development</p>
+
+<p>Merge changes, but don’t commit:   <br/>
+git merge &mdash;no-commit development</p>
+
+<p>Add a one-line log message from each merged commit to the merge message:   <br/>
+git merge &mdash;log development</p>
 ]]></content>
   </entry>
   
