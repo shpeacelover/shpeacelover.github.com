@@ -5,11 +5,16 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>When Can We Omit the Ampersand While Calling a Subroutine - Steven Sun's Blog</title>
+  <title>Practical Vim --chap03 Insert Mode - Steven Sun's Blog</title>
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="If the compiler sees the subroutine definition before invocation, or if Perl can tell from the syntax that it’s a subroutine call, the subroutine can &hellip;">
+  <meta name="description" content="In insert mode: 1
+2
+3
+&lt;C-h&gt; Delete back one character (backspace)
+&lt;C-w&gt; Delete back one word
+&lt;C-u&gt; Delete back to start of line to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://shpeacelover.github.io/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine">
+  <link rel="canonical" href="http://shpeacelover.github.io/blog/2013/08/28/practical-vim-chap03-insert-mode">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Steven Sun's Blog" type="application/atom+xml">
@@ -68,7 +73,7 @@
   
   <header>
     
-      <h1 class="entry-title">When Can We Omit the Ampersand While Calling a Subroutine</h1>
+      <h1 class="entry-title">Practical Vim --chap03 Insert Mode</h1>
     
     
       <p class="meta">
@@ -84,14 +89,30 @@
   
 
 
-<time datetime="2014-01-07T16:39:30+08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2014</time>
+<time datetime="2013-08-28T15:21:00+08:00" pubdate data-updated="true">Aug 28<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>If the compiler sees the subroutine definition before invocation, or if Perl can tell from the syntax that it’s a subroutine call, the subroutine can be called without an ampersand, just like a built-in function.</p>
+<div class="entry-content"><ol>
+<li>In insert mode:</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;C-h&gt; Delete back one character (backspace)
+</span><span class='line'>&lt;C-w&gt; Delete back one word
+</span><span class='line'>&lt;C-u&gt; Delete back to start of line</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>to go back from insert mode to normal mode, we can type the following commands: <ESC>, or &lt;ctrl+[>.</li>
+</ol>
+
 </div>
 
 
@@ -114,7 +135,7 @@
   
 
 
-<time datetime="2014-01-07T16:39:30+08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2014</time>
+<time datetime="2013-08-28T15:21:00+08:00" pubdate data-updated="true">Aug 28<span>th</span>, 2013</time>
       
 
 
@@ -122,7 +143,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shpeacelover.github.io/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine/" data-via="" data-counturl="http://shpeacelover.github.io/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shpeacelover.github.io/blog/2013/08/28/practical-vim-chap03-insert-mode/" data-via="" data-counturl="http://shpeacelover.github.io/blog/2013/08/28/practical-vim-chap03-insert-mode/" >Tweet</a>
   
   
   
@@ -131,10 +152,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/09/07/some-useful-macos-commands/" title="Previous Post: some useful macos commands">&laquo; some useful macos commands</a>
+        <a class="basic-alignment left" href="/blog/2013/08/28/practical-vim-chap02-normal-mode/" title="Previous Post: practical vim --chap02 Normal Mode">&laquo; practical vim --chap02 Normal Mode</a>
       
       
-        <a class="basic-alignment right" href="/blog/2014/01/09/new-year-resolution/" title="Next Post: new year resolution">new year resolution &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2013/08/28/practical-vim-chap04-visual-mode/" title="Next Post: practical vim --chap04 Visual Mode">practical vim --chap04 Visual Mode &raquo;</a>
       
     </p>
   </footer>

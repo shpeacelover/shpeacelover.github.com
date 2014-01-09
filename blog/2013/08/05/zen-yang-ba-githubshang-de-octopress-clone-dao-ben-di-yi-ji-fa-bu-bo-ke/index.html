@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>When Can We Omit the Ampersand While Calling a Subroutine - Steven Sun's Blog</title>
+  <title>怎样把 Github上 的 Octopress Clone 到本地以及发布博客 - Steven Sun's Blog</title>
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="If the compiler sees the subroutine definition before invocation, or if Perl can tell from the syntax that it’s a subroutine call, the subroutine can &hellip;">
+  <meta name="description" content="力求精简， 步骤如下：
+1. git clone -b source https://github.com/shpeacelover/shpeacelover.github.com octopress 2. cd octopress 3. git clone https://github.com/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://shpeacelover.github.io/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine">
+  <link rel="canonical" href="http://shpeacelover.github.io/blog/2013/08/05/zen-yang-ba-githubshang-de-octopress-clone-dao-ben-di-yi-ji-fa-bu-bo-ke">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Steven Sun's Blog" type="application/atom+xml">
@@ -68,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">When Can We Omit the Ampersand While Calling a Subroutine</h1>
+      <h1 class="entry-title">怎样把 Github上 的 Octopress Clone 到本地以及发布博客</h1>
     
     
       <p class="meta">
@@ -84,14 +85,26 @@
   
 
 
-<time datetime="2014-01-07T16:39:30+08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2014</time>
+<time datetime="2013-08-05T17:41:00+08:00" pubdate data-updated="true">Aug 5<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>If the compiler sees the subroutine definition before invocation, or if Perl can tell from the syntax that it’s a subroutine call, the subroutine can be called without an ampersand, just like a built-in function.</p>
+<div class="entry-content"><p>力求精简， 步骤如下：<br/>
+1. git clone -b source <a href="https://github.com/shpeacelover/shpeacelover.github.com">https://github.com/shpeacelover/shpeacelover.github.com</a> octopress <br/>
+2. cd octopress <br/>
+3. git clone <a href="https://github.com/shpeacelover/shpeacelover.github.com">https://github.com/shpeacelover/shpeacelover.github.com</a> _deploy  <br/>
+4. sudo gem install bundler <br/>
+5. bundle install <br/>
+6. rake new_post[&ldquo;The Title of Your Article&rdquo;] <br/>
+7. bundle exec rake generate<br/>
+8. bundle exec rake preview <br/>
+9. bundle exec rake deploy <br/>
+10. git add . <br/>
+11. git commit -m &lsquo;your comment&rsquo; <br/>
+12. git push origin source</p>
 </div>
 
 
@@ -114,7 +127,7 @@
   
 
 
-<time datetime="2014-01-07T16:39:30+08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2014</time>
+<time datetime="2013-08-05T17:41:00+08:00" pubdate data-updated="true">Aug 5<span>th</span>, 2013</time>
       
 
 
@@ -122,7 +135,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shpeacelover.github.io/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine/" data-via="" data-counturl="http://shpeacelover.github.io/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shpeacelover.github.io/blog/2013/08/05/zen-yang-ba-githubshang-de-octopress-clone-dao-ben-di-yi-ji-fa-bu-bo-ke/" data-via="" data-counturl="http://shpeacelover.github.io/blog/2013/08/05/zen-yang-ba-githubshang-de-octopress-clone-dao-ben-di-yi-ji-fa-bu-bo-ke/" >Tweet</a>
   
   
   
@@ -131,10 +144,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/09/07/some-useful-macos-commands/" title="Previous Post: some useful macos commands">&laquo; some useful macos commands</a>
+        <a class="basic-alignment left" href="/blog/2013/08/05/fan-sheng/" title="Previous Post: 反省">&laquo; 反省</a>
       
       
-        <a class="basic-alignment right" href="/blog/2014/01/09/new-year-resolution/" title="Next Post: new year resolution">new year resolution &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2013/08/17/useful-vim-command-tips/" title="Next Post: useful vim command tips">useful vim command tips &raquo;</a>
       
     </p>
   </footer>
