@@ -1,0 +1,75 @@
+---
+layout: post
+title: "oop in PHP"
+date: 2013-08-23 20:47
+comments: true
+categories:
+---
+1.&nbsp;define a class with function and parameters
+
+```
+class classname
+    {
+    function operation1()
+    {
+    }
+    function operation2($param1, $param2)
+    {
+    }
+}
+```     
+
+
+2.&nbsp;constructor
+
+```
+<?php
+class classname
+{
+  function __construct($param)
+  {
+    echo "Constructor called with parameter ".$param."<br />";
+  }
+}
+
+$a = new classname("First");
+$b = new classname("Second");
+$c = new classname();
+?>
+```
+
+3.&nbsp;class attribute
+
+```
+class classname
+{
+public $attribute;
+}
+$a = new classname();
+$a->attribute = "value";
+echo $a->attribute;
+```
+
+
+4.&nbsp; When you use this keyword "final" in front of a function declaration, that function cannot be overridden in any subclasses
+
+
+5.&nbsp; PHP use "interface" to implement the function of "multi inheritance"
+```
+interface Displayable
+{
+    function display();
+}
+
+class webPage implements Displayable
+{
+    function display()
+{
+// ...
+}
+}
+```
+
+
+
+
