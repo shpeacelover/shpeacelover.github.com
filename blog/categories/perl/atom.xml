@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Perl | Steven Sun's Blog]]></title>
+  <link href="http://shpeacelover.github.io/blog/categories/perl/atom.xml" rel="self"/>
+  <link href="http://shpeacelover.github.io/"/>
+  <updated>2014-01-10T20:12:27+08:00</updated>
+  <id>http://shpeacelover.github.io/</id>
+  <author>
+    <name><![CDATA[Steven Sun]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Notes on Perl]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/09/notes-on-perl/"/>
+    <updated>2014-01-09T21:41:24+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/09/notes-on-perl</id>
+    <content type="html"><![CDATA[<ol>
+<li>为了查看某一个模块的版本号， 在命令行下输入以下的内容：
+perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
+<li></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[When Can We Omit the Ampersand While Calling a Subroutine]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine/"/>
+    <updated>2014-01-07T16:39:30+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine</id>
+    <content type="html"><![CDATA[<p>If the compiler sees the subroutine definition before invocation, or if Perl can tell from the syntax that it’s a subroutine call, the subroutine can be called without an ampersand, just like a built-in function.</p>
+]]></content>
+  </entry>
+  
+</feed>

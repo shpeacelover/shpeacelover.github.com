@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Blog | Steven Sun's Blog]]></title>
+  <link href="http://shpeacelover.github.io/blog/categories/blog/atom.xml" rel="self"/>
+  <link href="http://shpeacelover.github.io/"/>
+  <updated>2014-01-10T20:12:27+08:00</updated>
+  <id>http://shpeacelover.github.io/</id>
+  <author>
+    <name><![CDATA[Steven Sun]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[怎样把 Github上 的 Octopress Clone 到本地以及发布博客]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/08/05/zen-yang-ba-githubshang-de-octopress-clone-dao-ben-di-yi-ji-fa-bu-bo-ke/"/>
+    <updated>2013-08-05T17:41:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/08/05/zen-yang-ba-githubshang-de-octopress-clone-dao-ben-di-yi-ji-fa-bu-bo-ke</id>
+    <content type="html"><![CDATA[<p>力求精简， 步骤如下：
+1. git clone -b source <a href="https://github.com/shpeacelover/shpeacelover.github.com">https://github.com/shpeacelover/shpeacelover.github.com</a> octopress
+2. cd octopress
+3. git clone <a href="https://github.com/shpeacelover/shpeacelover.github.com">https://github.com/shpeacelover/shpeacelover.github.com</a> _deploy
+4. sudo gem install bundler
+5. bundle install
+6. rake new_post[&ldquo;The Title of Your Article&rdquo;]
+7. bundle exec rake generate
+8. bundle exec rake preview
+9. bundle exec rake deploy
+10. git add .
+11. git commit -m &lsquo;your comment&rsquo;
+12. git push origin source</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git常用命令]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/07/23/gitchang-yong-ming-ling/"/>
+    <updated>2013-07-23T18:55:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/07/23/gitchang-yong-ming-ling</id>
+    <content type="html"><![CDATA[<p>以下是自己常用到的git命令:</p>
+
+<p>git init
+git add .
+git commit -a -m &lsquo;comment&rsquo;
+git checkout .
+git stauts
+git remote add origin ssh://user@host/~/git/depot.git
+git push origin master
+git clone some-repository some-path
+git clone &mdash;depth 50 some-repository
+git add -u|&mdash;update
+git add -A|&mdash;all
+git commit -m &ldquo;Some message&rdquo; -a                 (****this will commit all modified files)</p>
+
+<p>Unstage a modified file that’s been staged.
+For example, to undo changes to cache.py, use this:
+prompt> git reset HEAD &mdash; cache.py</p>
+
+<p>Undo all uncommitted changes to a file.
+prompt> git checkout &mdash; cache.py</p>
+
+<p>git config credential.helper &lsquo;cache &mdash;timeout=3600&rsquo;
+(the above will cache our password)</p>
+
+<p>git brach new
+git checkout new
+git checkout -b new</p>
+
+<p>to view all local branches:
+git branch
+to iew all remote branches:
+git branch -r
+to view all branches:
+git branch -a
+to view all that are or are not merged into the current branch :
+git branch &mdash;merged
+git branch &mdash;no-merged</p>
+
+<p>Merge changes from development to the master branch:
+git checkout master
+git merge development</p>
+
+<p>Merge changes, but don’t commit:
+git merge &mdash;no-commit development</p>
+
+<p>Add a one-line log message from each merged commit to the merge message:
+git merge &mdash;log development</p>
+]]></content>
+  </entry>
+  
+</feed>

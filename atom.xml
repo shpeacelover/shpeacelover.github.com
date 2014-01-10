@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-10T19:38:52+08:00</updated>
+  <updated>2014-01-10T20:12:27+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -19,7 +19,7 @@
     <updated>2014-01-09T21:41:24+08:00</updated>
     <id>http://shpeacelover.github.io/blog/2014/01/09/notes-on-perl</id>
     <content type="html"><![CDATA[<ol>
-<li>为了查看某一个模块的版本号， 在命令行下输入以下的内容： <br/>
+<li>为了查看某一个模块的版本号， 在命令行下输入以下的内容：
 perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 <li></li>
 </ol>
@@ -44,12 +44,12 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 
 <p>学了好几天的Catalyst了。 现在我要下定决心把Perl的两个框架给学好， 一个是Catalyst， 一个是Dancer。 这两个框架公司里都有用到的。但是感觉挺难的， 而我的那个L1的同事竟然说Dancer挺容易的。 我是有多蠢啊！！！！</p>
 
-<p>2014年， 希望自己在工作上能够有如下的进步。 <br/>
-1. 在Perl上能稍微有点成绩。 毕竟从知道有perl这门语言到现在都已经有两年多了。 现在还是这么菜的水平， 完全说不过去的。  <br/>
-2. 彻底掌握Catalyst还有Dancer这两个框架。 <br/>
-3. 对于PHP， 因为基本上公司用的框架就在那里了， 希望在新的一年里能够在扎实下PHP代码编写的技巧。  <br/>
-4. 入职满两年的时候希望能够有底气跟manager说我想转到L2去。 <br/>
-5. 每天写技术博客， 或长或短， 记录下每天学到什么新的技术。 那样或许长进会更快点的。    <br/>
+<p>2014年， 希望自己在工作上能够有如下的进步。
+1. 在Perl上能稍微有点成绩。 毕竟从知道有perl这门语言到现在都已经有两年多了。 现在还是这么菜的水平， 完全说不过去的。
+2. 彻底掌握Catalyst还有Dancer这两个框架。
+3. 对于PHP， 因为基本上公司用的框架就在那里了， 希望在新的一年里能够在扎实下PHP代码编写的技巧。
+4. 入职满两年的时候希望能够有底气跟manager说我想转到L2去。
+5. 每天写技术博客， 或长或短， 记录下每天学到什么新的技术。 那样或许长进会更快点的。
 6. 有不懂的刻苦钻研或者向同事请教。</p>
 
 <p>好吧， 就写这么多了。 希望能好好审视下自己今天写下的这些东西。</p>
@@ -228,8 +228,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 </span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
 
 
-<p></p>
-
 <p>2.&nbsp;constructor</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -373,18 +371,18 @@ What a shame!</p>
     <link href="http://shpeacelover.github.io/blog/2013/08/05/zen-yang-ba-githubshang-de-octopress-clone-dao-ben-di-yi-ji-fa-bu-bo-ke/"/>
     <updated>2013-08-05T17:41:00+08:00</updated>
     <id>http://shpeacelover.github.io/blog/2013/08/05/zen-yang-ba-githubshang-de-octopress-clone-dao-ben-di-yi-ji-fa-bu-bo-ke</id>
-    <content type="html"><![CDATA[<p>力求精简， 步骤如下：<br/>
-1. git clone -b source <a href="https://github.com/shpeacelover/shpeacelover.github.com">https://github.com/shpeacelover/shpeacelover.github.com</a> octopress <br/>
-2. cd octopress <br/>
-3. git clone <a href="https://github.com/shpeacelover/shpeacelover.github.com">https://github.com/shpeacelover/shpeacelover.github.com</a> _deploy  <br/>
-4. sudo gem install bundler <br/>
-5. bundle install <br/>
-6. rake new_post[&ldquo;The Title of Your Article&rdquo;] <br/>
-7. bundle exec rake generate<br/>
-8. bundle exec rake preview <br/>
-9. bundle exec rake deploy <br/>
-10. git add . <br/>
-11. git commit -m &lsquo;your comment&rsquo; <br/>
+    <content type="html"><![CDATA[<p>力求精简， 步骤如下：
+1. git clone -b source <a href="https://github.com/shpeacelover/shpeacelover.github.com">https://github.com/shpeacelover/shpeacelover.github.com</a> octopress
+2. cd octopress
+3. git clone <a href="https://github.com/shpeacelover/shpeacelover.github.com">https://github.com/shpeacelover/shpeacelover.github.com</a> _deploy
+4. sudo gem install bundler
+5. bundle install
+6. rake new_post[&ldquo;The Title of Your Article&rdquo;]
+7. bundle exec rake generate
+8. bundle exec rake preview
+9. bundle exec rake deploy
+10. git add .
+11. git commit -m &lsquo;your comment&rsquo;
 12. git push origin source</p>
 ]]></content>
   </entry>

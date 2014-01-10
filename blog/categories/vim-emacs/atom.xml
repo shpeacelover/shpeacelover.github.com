@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Vim_emacs | Steven Sun's Blog]]></title>
+  <link href="http://shpeacelover.github.io/blog/categories/vim-emacs/atom.xml" rel="self"/>
+  <link href="http://shpeacelover.github.io/"/>
+  <updated>2014-01-10T20:12:27+08:00</updated>
+  <id>http://shpeacelover.github.io/</id>
+  <author>
+    <name><![CDATA[Steven Sun]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[奇技淫巧之vim]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/09/05/qi-ji-yin-qiao-zhi-vim/"/>
+    <updated>2013-09-05T11:04:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/09/05/qi-ji-yin-qiao-zhi-vim</id>
+    <content type="html"><![CDATA[<p>在vim中如何办这样的事呢？ 有一对括号， 现在定位到一个， 要去找到另一个。 方法就是： 把光标定位到一个括号上， 然后在normal模式下， 按shift+5， 亦即%来进行括号的匹配。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[奇技淫巧之vim匹配括号]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/09/04/qi-ji-yin-qiao-zhi-vimpi-pei-gua-hao/"/>
+    <updated>2013-09-04T10:52:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/09/04/qi-ji-yin-qiao-zhi-vimpi-pei-gua-hao</id>
+    <content type="html"><![CDATA[<p>今日在和同事交接代码的时候， 因为代码比较长， 所以出现了在看到一个括号的时候， 不知道与它匹配的括号在哪里。 当时使用的是vim， 后来换成了sublime text， 但是还是不知道怎么去找括号的另一半。现在我们就来看看， 怎么在vim中去匹配括号的另一半。</p>
+
+<p>首先把光标定位在一个括号上，在normal模式中, 按shift+5, 亦即%来自动调转到另一个括号上。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Practical Vim --chap04 Visual Mode]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/08/28/practical-vim-chap04-visual-mode/"/>
+    <updated>2013-08-28T15:38:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/08/28/practical-vim-chap04-visual-mode</id>
+    <content type="html"><![CDATA[<ol>
+<li><p>Vim’s Visual mode allows us to define a selection of text and then operate upon it.</p></li>
+<li><p>ways to enabling visual modes:
+<code>
+v Enable character-wise Visual mode
+V Enable line-wise Visual mode
+&lt;C-v&gt; Enable block-wise Visual mode
+gv Reselect the last visual selection
+</code></p></li>
+<li><p>the &lsquo;gv&rsquo; command isreselects the range of text that was last selected in Visual mode. No matter whether the previous selection was character-wise, line-wise, or block-wise, the gv command should do the right thing. The only case where it might get confused is if the last selection has since been deleted.</p></li>
+<li><p>if there is a html tag, like &ldquo;<a href="#">three</a>&rdquo;, type vit in normal mode, will get you put your cursor into the &lsquo;h&rsquo; character of the word &ldquo;three&rdquo;. vit means &ldquo;visually select inside the tag&rdquo;</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Practical Vim --chap03 Insert Mode]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/08/28/practical-vim-chap03-insert-mode/"/>
+    <updated>2013-08-28T15:21:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/08/28/practical-vim-chap03-insert-mode</id>
+    <content type="html"><![CDATA[<ol>
+<li>In insert mode:
+<code>
+&lt;C-h&gt; Delete back one character (backspace)
+&lt;C-w&gt; Delete back one word
+&lt;C-u&gt; Delete back to start of line
+</code></li>
+<li>to go back from insert mode to normal mode, we can type the following commands: <ESC>, or &lt;ctrl+[>.</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Practical Vim --chap02 Normal Mode]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/08/28/practical-vim-chap02-normal-mode/"/>
+    <updated>2013-08-28T14:43:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/08/28/practical-vim-chap02-normal-mode</id>
+    <content type="html"><![CDATA[<ol>
+<li><p>if there is a line and it is in normal mode, like &ldquo;hello, everyone, this is steven sun&rdquo;. now if you position your cursor on the &ldquo;s&rdquo; of &ldquo;steven sun&rdquo; and then type &ldquo;c2w&rdquo;, you will enter into the &ldquo;insert mode&rdquo; and will be prompted to enter some text.</p></li>
+<li><p>use dap to delete a paragraph, use daw to  delete a  word, use dal to delete a  single character;</p></li>
+<li><p>we can type :h operator to find those information about operators in vim.</p></li>
+<li><p>an action is composed from an operator followed by a motion.</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

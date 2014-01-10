@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: PHP | Steven Sun's Blog]]></title>
+  <link href="http://shpeacelover.github.io/blog/categories/php/atom.xml" rel="self"/>
+  <link href="http://shpeacelover.github.io/"/>
+  <updated>2014-01-10T20:12:27+08:00</updated>
+  <id>http://shpeacelover.github.io/</id>
+  <author>
+    <name><![CDATA[Steven Sun]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Network and Protocol Functions in PHP]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/08/28/network-and-protocol-functions-in-php/"/>
+    <updated>2013-08-28T14:08:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/08/28/network-and-protocol-functions-in-php</id>
+    <content type="html"><![CDATA[<ol>
+<li><p>file_get_contents($url);</p></li>
+<li><p>urlencode() function.This function takes a string and converts it to the proper format for an URL</p></li>
+<li><p>parse_url($url)</p></li>
+<li><p>gethostbyname</p></li>
+<li><p>ftp_fget</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Oop in PHP]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/08/23/oop-in-php/"/>
+    <updated>2013-08-23T20:47:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/08/23/oop-in-php</id>
+    <content type="html"><![CDATA[<p>1.&nbsp;define a class with function and parameters</p>
+
+<p>```
+class classname</p>
+
+<pre><code>{
+function operation1()
+{
+}
+function operation2($param1, $param2)
+{
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>2.&nbsp;constructor</p>
+
+<p>```
+&lt;?php
+class classname
+{
+  function __construct($param)
+  {</p>
+
+<pre><code>echo "Constructor called with parameter ".$param."&lt;br /&gt;";
+</code></pre>
+
+<p>  }
+}</p>
+
+<p>$a = new classname(&ldquo;First&rdquo;);
+$b = new classname(&ldquo;Second&rdquo;);
+$c = new classname();
+?>
+```</p>
+
+<p>3.&nbsp;class attribute</p>
+
+<p><code>
+class classname
+{
+public $attribute;
+}
+$a = new classname();
+$a-&gt;attribute = "value";
+echo $a-&gt;attribute;
+</code></p>
+
+<p>4.&nbsp; When you use this keyword &ldquo;final&rdquo; in front of a function declaration, that function cannot be overridden in any subclasses</p>
+
+<p>5.&nbsp; PHP use &ldquo;interface&rdquo; to implement the function of &ldquo;multi inheritance&rdquo;
+```
+interface Displayable
+{</p>
+
+<pre><code>function display();
+</code></pre>
+
+<p>}</p>
+
+<p>class webPage implements Displayable
+{</p>
+
+<pre><code>function display()
+</code></pre>
+
+<p>{
+// &hellip;
+}
+}
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Text Encoding and Transformation in PHP]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/08/19/text-encoding-and-transformation-in-php/"/>
+    <updated>2013-08-19T19:36:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/08/19/text-encoding-and-transformation-in-php</id>
+    <content type="html"><![CDATA[<p>GET: urlencode/rawurlencode</p>
+
+<p>links: htmlspecialchars</p>
+
+<p>SQL: addslashes/stripslashes</p>
+
+<p>HTML: htmlentities, strip_tags, nl2br;</p>
+]]></content>
+  </entry>
+  
+</feed>
