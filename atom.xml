@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-10T20:28:37+08:00</updated>
+  <updated>2014-01-10T20:30:47+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -88,15 +88,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[奇技淫巧之vim]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/09/05/qi-ji-yin-qiao-zhi-vim/"/>
-    <updated>2013-09-05T11:04:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/09/05/qi-ji-yin-qiao-zhi-vim</id>
-    <content type="html"><![CDATA[<p>在vim中如何办这样的事呢？ 有一对括号， 现在定位到一个， 要去找到另一个。 方法就是： 把光标定位到一个括号上， 然后在normal模式下， 按shift+5， 亦即%来进行括号的匹配。</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[奇技淫巧之vim匹配括号]]></title>
     <link href="http://shpeacelover.github.io/blog/2013/09/04/qi-ji-yin-qiao-zhi-vimpi-pei-gua-hao/"/>
     <updated>2013-09-04T10:52:00+08:00</updated>
@@ -131,31 +122,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 <ol>
 <li><p>the &lsquo;gv&rsquo; command isreselects the range of text that was last selected in Visual mode. No matter whether the previous selection was character-wise, line-wise, or block-wise, the gv command should do the right thing. The only case where it might get confused is if the last selection has since been deleted.</p></li>
 <li><p>if there is a html tag, like &ldquo;<a href="#">three</a>&rdquo;, type vit in normal mode, will get you put your cursor into the &lsquo;h&rsquo; character of the word &ldquo;three&rdquo;. vit means &ldquo;visually select inside the tag&rdquo;</p></li>
-</ol>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Practical Vim --chap03 Insert Mode]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/08/28/practical-vim-chap03-insert-mode/"/>
-    <updated>2013-08-28T15:21:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/08/28/practical-vim-chap03-insert-mode</id>
-    <content type="html"><![CDATA[<ol>
-<li>In insert mode:</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;C-h&gt; Delete back one character (backspace)
-</span><span class='line'>&lt;C-w&gt; Delete back one word
-</span><span class='line'>&lt;C-u&gt; Delete back to start of line</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>to go back from insert mode to normal mode, we can type the following commands: <ESC>, or &lt;ctrl+[>.</li>
 </ol>
 
 ]]></content>
@@ -441,6 +407,62 @@ What a shame!</p>
 <p>Being innocent and having fun</p>
 
 <p>(This is one I modified from John Denver&rsquo;s &ldquo;Take Me Home, Country Roads&rdquo; to reminisce my long passed childhood.)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git常用命令]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/07/23/gitchang-yong-ming-ling/"/>
+    <updated>2013-07-23T18:55:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/07/23/gitchang-yong-ming-ling</id>
+    <content type="html"><![CDATA[<p>以下是自己常用到的git命令:</p>
+
+<p>git init
+git add .
+git commit -a -m &lsquo;comment&rsquo;
+git checkout .
+git stauts
+git remote add origin ssh://user@host/~/git/depot.git
+git push origin master
+git clone some-repository some-path
+git clone &mdash;depth 50 some-repository
+git add -u|&mdash;update
+git add -A|&mdash;all
+git commit -m &ldquo;Some message&rdquo; -a                 (****this will commit all modified files)</p>
+
+<p>Unstage a modified file that’s been staged.
+For example, to undo changes to cache.py, use this:
+prompt> git reset HEAD &mdash; cache.py</p>
+
+<p>Undo all uncommitted changes to a file.
+prompt> git checkout &mdash; cache.py</p>
+
+<p>git config credential.helper &lsquo;cache &mdash;timeout=3600&rsquo;
+(the above will cache our password)</p>
+
+<p>git brach new
+git checkout new
+git checkout -b new</p>
+
+<p>to view all local branches:
+git branch
+to iew all remote branches:
+git branch -r
+to view all branches:
+git branch -a
+to view all that are or are not merged into the current branch :
+git branch &mdash;merged
+git branch &mdash;no-merged</p>
+
+<p>Merge changes from development to the master branch:
+git checkout master
+git merge development</p>
+
+<p>Merge changes, but don’t commit:
+git merge &mdash;no-commit development</p>
+
+<p>Add a one-line log message from each merged commit to the merge message:
+git merge &mdash;log development</p>
 ]]></content>
   </entry>
   
