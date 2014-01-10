@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-09T21:09:21+08:00</updated>
+  <updated>2014-01-10T19:38:52+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Notes on Perl]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/09/notes-on-perl/"/>
+    <updated>2014-01-09T21:41:24+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/09/notes-on-perl</id>
+    <content type="html"><![CDATA[<ol>
+<li>为了查看某一个模块的版本号， 在命令行下输入以下的内容： <br/>
+perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
+<li></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[New Year Resolution]]></title>
@@ -429,62 +443,6 @@ What a shame!</p>
 <p>Being innocent and having fun</p>
 
 <p>(This is one I modified from John Denver&rsquo;s &ldquo;Take Me Home, Country Roads&rdquo; to reminisce my long passed childhood.)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Git常用命令]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/07/23/gitchang-yong-ming-ling/"/>
-    <updated>2013-07-23T18:55:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/07/23/gitchang-yong-ming-ling</id>
-    <content type="html"><![CDATA[<p>以下是自己常用到的git命令:</p>
-
-<p>git init<br/>
-git add .<br/>
-git commit -a -m &lsquo;comment&rsquo; <br/>
-git checkout . <br/>
-git stauts <br/>
-git remote add origin ssh://user@host/~/git/depot.git  <br/>
-git push origin master    <br/>
-git clone some-repository some-path   <br/>
-git clone &mdash;depth 50 some-repository   <br/>
-git add -u|&mdash;update      <br/>
-git add -A|&mdash;all    <br/>
-git commit -m &ldquo;Some message&rdquo; -a                 (****this will commit all modified files)</p>
-
-<p>Unstage a modified file that’s been staged.<br/>
-For example, to undo changes to cache.py, use this:   <br/>
-prompt> git reset HEAD &mdash; cache.py</p>
-
-<p>Undo all uncommitted changes to a file.   <br/>
-prompt> git checkout &mdash; cache.py</p>
-
-<p>git config credential.helper &lsquo;cache &mdash;timeout=3600&rsquo;
-(the above will cache our password)</p>
-
-<p>git brach new  <br/>
-git checkout new  <br/>
-git checkout -b new</p>
-
-<p>to view all local branches:  <br/>
-git branch   <br/>
-to iew all remote branches:   <br/>
-git branch -r    <br/>
-to view all branches:   <br/>
-git branch -a      <br/>
-to view all that are or are not merged into the current branch :  <br/>
-git branch &mdash;merged  <br/>
-git branch &mdash;no-merged</p>
-
-<p>Merge changes from development to the master branch:  <br/>
-git checkout master    <br/>
-git merge development</p>
-
-<p>Merge changes, but don’t commit:   <br/>
-git merge &mdash;no-commit development</p>
-
-<p>Add a one-line log message from each merged commit to the merge message:   <br/>
-git merge &mdash;log development</p>
 ]]></content>
   </entry>
   

@@ -9,8 +9,9 @@
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="忧郁， 毫无斗志。怎么好像每周都有那么会儿啊！要自强不息啊！
-">
+  <meta name="description" content="file_get_contents($url);
+urlencode() function.This function takes a string and converts it to the proper format for an URL
+parse_url($url) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +67,49 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/28/network-and-protocol-functions-in-php/">Network and Protocol Functions in PHP</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-28T14:08:00+08:00" pubdate data-updated="true">Aug 28<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ol>
+<li><p>file_get_contents($url);</p></li>
+<li><p>urlencode() function.This function takes a string and converts it to the proper format for an URL</p></li>
+<li><p>parse_url($url)</p></li>
+<li><p>gethostbyname</p></li>
+<li><p>ftp_fget</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -564,90 +608,9 @@ What a shame!</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/23/gitchang-yong-ming-ling/">Git常用命令</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-23T18:55:00+08:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>以下是自己常用到的git命令:</p>
-
-<p>git init<br/>
-git add .<br/>
-git commit -a -m &lsquo;comment&rsquo; <br/>
-git checkout . <br/>
-git stauts <br/>
-git remote add origin ssh://user@host/~/git/depot.git  <br/>
-git push origin master    <br/>
-git clone some-repository some-path   <br/>
-git clone &mdash;depth 50 some-repository   <br/>
-git add -u|&mdash;update      <br/>
-git add -A|&mdash;all    <br/>
-git commit -m &ldquo;Some message&rdquo; -a                 (****this will commit all modified files)</p>
-
-<p>Unstage a modified file that’s been staged.<br/>
-For example, to undo changes to cache.py, use this:   <br/>
-prompt> git reset HEAD &mdash; cache.py</p>
-
-<p>Undo all uncommitted changes to a file.   <br/>
-prompt> git checkout &mdash; cache.py</p>
-
-<p>git config credential.helper &lsquo;cache &mdash;timeout=3600&rsquo;
-(the above will cache our password)</p>
-
-<p>git brach new  <br/>
-git checkout new  <br/>
-git checkout -b new</p>
-
-<p>to view all local branches:  <br/>
-git branch   <br/>
-to iew all remote branches:   <br/>
-git branch -r    <br/>
-to view all branches:   <br/>
-git branch -a      <br/>
-to view all that are or are not merged into the current branch :  <br/>
-git branch &mdash;merged  <br/>
-git branch &mdash;no-merged</p>
-
-<p>Merge changes from development to the master branch:  <br/>
-git checkout master    <br/>
-git merge development</p>
-
-<p>Merge changes, but don’t commit:   <br/>
-git merge &mdash;no-commit development</p>
-
-<p>Add a one-line log message from each merged commit to the merge message:   <br/>
-git merge &mdash;log development</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/3/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -660,6 +623,10 @@ git merge &mdash;log development</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/09/notes-on-perl/">Notes on Perl</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/01/09/new-year-resolution/">New Year Resolution</a>
@@ -675,10 +642,6 @@ git merge &mdash;log development</p>
     
       <li class="post">
         <a href="/blog/2013/09/05/zen-ke-wang-xiang/">怎可妄想</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/05/qi-ji-yin-qiao-zhi-vim/">奇技淫巧之vim</a>
       </li>
     
   </ul>
