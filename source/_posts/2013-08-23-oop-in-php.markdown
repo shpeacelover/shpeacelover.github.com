@@ -3,7 +3,7 @@ layout: post
 title: "oop in PHP"
 date: 2013-08-23 20:47
 comments: true
-categories:
+categories:PHP
 ---
 1.&nbsp;define a class with function and parameters
 
@@ -17,7 +17,7 @@ class classname
     {
     }
 }
-```     
+```
 
 
 2.&nbsp;constructor

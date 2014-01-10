@@ -3,7 +3,7 @@ layout: post
 title: "text encoding and transformation in PHP"
 date: 2013-08-19 19:36
 comments: true
-categories:
+categories:PHP
 ---
 GET: urlencode/rawurlencode
 

@@ -3,11 +3,11 @@ layout: post
 title: "反省"
 date: 2013-08-05 17:27
 comments: true
-categories: 
+categories:Think
 ---
-之前在学Django的时候， 觉得挺难的， 并不像网络上有的人所说的那样的简单。结果是没有坚持下来。   
+之前在学Django的时候， 觉得挺难的， 并不像网络上有的人所说的那样的简单。结果是没有坚持下来。
 
-现在在学Ruby还有Ruby On Rails，觉得愈加的难了。 毕竟自己之前对于Python以及Django的了解要多于对Ruby和Rails的了解。  
+现在在学Ruby还有Ruby On Rails，觉得愈加的难了。 毕竟自己之前对于Python以及Django的了解要多于对Ruby和Rails的了解。
 
 虽然如此， 但是自己也已经啃了这些硬骨头有段日子了。 虽然很多东西仍然不甚了解， 但是如果不坚持下去， 就会又是只知道个皮毛。 那就又等于浪费了很多宝贵的时间去做无用功了。
 

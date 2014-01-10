@@ -3,6 +3,6 @@ layout: post
 title: "奋斗"
 date: 2013-08-05 17:13
 comments: true
-categories: 
+categories:Think
 ---
 偶尔的心灰意冷算得了什么？人生短短几十载，吃点苦， 受点累又怎样？ 如果年轻时不努力奋进，难道等到进了天堂后再去忏悔？
