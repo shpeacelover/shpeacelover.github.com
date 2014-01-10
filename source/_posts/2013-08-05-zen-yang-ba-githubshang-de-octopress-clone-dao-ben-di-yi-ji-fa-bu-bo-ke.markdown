@@ -3,7 +3,7 @@ layout: post
 title: "怎样把 github上 的 octopress clone 到本地以及发布博客"
 date: 2013-08-05 17:41
 comments: true
-categories:Blog
+categories: Blog
 ---
 力求精简， 步骤如下：
 1. git clone -b source https://github.com/shpeacelover/shpeacelover.github.com octopress

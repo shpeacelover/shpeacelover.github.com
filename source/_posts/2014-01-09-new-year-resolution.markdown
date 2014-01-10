@@ -3,7 +3,7 @@ layout: post
 title: "new year resolution"
 date: 2014-01-09 20:33:07 +0800
 comments: true
-categories:Think
+categories: Think
 ---
 好久没有对未来做些规划了。 总觉得日子就这样过吧。 也懒得去做些什么大的改变了。
 

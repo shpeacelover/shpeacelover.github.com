@@ -3,7 +3,7 @@ layout: post
 title: "git常用命令"
 date: 2013-07-23 18:55
 comments: true
-categories:Blog
+categories: Blog
 ---
 以下是自己常用到的git命令:
 

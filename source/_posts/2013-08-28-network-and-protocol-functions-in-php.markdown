@@ -3,7 +3,7 @@ layout: post
 title: "network and protocol functions in PHP"
 date: 2013-08-28 14:08
 comments: true
-categories:PHP
+categories: PHP
 ---
 1. file_get_contents($url);
 

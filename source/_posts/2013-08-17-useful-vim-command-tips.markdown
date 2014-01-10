@@ -3,7 +3,7 @@ layout: post
 title: "useful vim command tips"
 date: 2013-08-17 14:50
 comments: true
-categories:vim_emacs
+categories: vim_emacs
 ---
 ctrl+w+(w, h, j, k,l)
 

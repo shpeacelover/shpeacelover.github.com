@@ -3,7 +3,7 @@ layout: post
 title: "practical vim --chap03 Insert Mode"
 date: 2013-08-28 15:21
 comments: true
-categories:vim_emacs
+categories: vim_emacs
 ---
 1. In insert mode:
 ```

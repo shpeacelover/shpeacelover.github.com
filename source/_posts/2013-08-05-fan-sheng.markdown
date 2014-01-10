@@ -3,7 +3,7 @@ layout: post
 title: "反省"
 date: 2013-08-05 17:27
 comments: true
-categories:Think
+categories: Think
 ---
 之前在学Django的时候， 觉得挺难的， 并不像网络上有的人所说的那样的简单。结果是没有坚持下来。
 

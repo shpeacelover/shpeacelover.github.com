@@ -3,7 +3,7 @@ layout: post
 title: "practical vim --chap04 Visual Mode"
 date: 2013-08-28 15:38
 comments: true
-categories:vim_emacs
+categories: vim_emacs
 ---
 1. Vim’s Visual mode allows us to define a selection of text and then operate upon it.
 

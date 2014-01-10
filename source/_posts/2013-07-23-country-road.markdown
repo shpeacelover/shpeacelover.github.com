@@ -3,7 +3,7 @@ layout: post
 title: "Country Road"
 date: 2013-07-23 21:20
 comments: true
-categories:Think
+categories: Think
 ---
 Almost heaven, my hometown
 
