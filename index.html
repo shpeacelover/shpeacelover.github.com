@@ -9,9 +9,8 @@
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="
-为了查看某一个模块的版本号， 在命令行下输入以下的内容：
-perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo; ">
+  <meta name="description" content="The command for creating a database model is as the following: 1
+perl script/myapp_create.pl model TestDatabase DBIC::Schema MyApp::Schema:: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -73,6 +72,123 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo; ">
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model/">Catalyst 5.8 the Perl MVC Framework Notes&#8211;Creating a Database Model</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-11T16:24:03+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ol>
+<li>The command for creating a database model is as the following:</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>perl script/myapp_create.pl model TestDatabase DBIC::Schema MyApp::Schema::TestDatabase create=dynamic dbi:SQLite:tmp/database</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<ol>
+<li>The first argument is the name of the Catalyst Model (TestDatabase). DBIC::Schema is what sort of model we&rsquo;re creating. MyApp::Schema::TestDatabase is where the schema definition will be stored (we won&rsquo;t use the Schema in this example, but real applications will). create=dynamic tells DBIC to read the database every time theapplication is started to determine the schema (layout of tables, foreign key relations, and so on.). The final argument is the DBI connect string for the database.</li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes/">Catalyst 5.8 the Perl MVC Framework Notes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-11T12:33:25+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ol>
+<li><p>catalyst.pl MyApp    (this command will create the app)</p></li>
+<li><p>Inside the lib directory, there is a file named MyApp.pm, This file defines the namespace and inheritance that are necessary to make this a Catalyst application. It also contains the list of plugins to load application-­specific configurations. These configurations can also be defined in the myapp.conf file in the MyApp directory. However, if the same configuration is mentioned in both the files, then the configuration mentioned here takes precedence.</p></li>
+<li>The file lib/MyApp/Controller/Root.pm will handle all root level (/)URLs. This is where the code that generates the welcome page is located.</li>
+<li>The root directory will hold your templates and other non-­code support files. A subdirectory called /root/static is for static content such as images and stylesheets. Catalyst is set up to serve static files from this directory automatically (under the /static path), thanks toCatalyst::Plugin::Static::Simple.</li>
+<li>The script directory contains the scripts needed to run, test, and modify your application. To note here, the script myapp_create.pl, which is a version of catalyst.pl that&rsquo;s customized for your application. It can create Models, Views, Controllers, tests, and many other things.</li>
+<li><p>The t directory is where your application&rsquo;s automatic tests are stored. By default, you&rsquo;ll have the following three tests:</p>
+
+<ul>
+<li>01app.t, which is a test that passes if your application compiles.</li>
+<li>02pod.t, which will pass if your Plain Old Documentation (POD)embedded API documentation, inside your application, is valid.</li>
+<li>03podcoverage.t, which tests that every public function in your application has some documentation.</li>
+</ul>
+</li>
+<li><p>When a user makes a request using the browser, Catalyst will look for the appropriate method that can handle the request within packages called Controllers.</p></li>
+<li><p>In a controller, there are some automatically created stuff. &ldquo;BEGIN {extends &lsquo;Catalyst::Controller&rsquo;; }&rdquo; is to tell Moose/Perl that this module is a Catalyst Controller. &ldquo;<strong>PACKAGE</strong>&ndash;>meta->make_immutable&rdquo; ells Moose that this module will not change at runtime. This statement is necessary for performance gains and is good practice to mention in every Moose module. Modules must return true when they&rsquo;re loaded,otherwise Perl will assume that the loading has failed and will die with an error message. 1 is always true, so it&rsquo;s conventional to use it for this purpose.</p></li>
+<li>To create a view, we can issue the following command, &lsquo;perl script/myapp_create.pl view TT TT&rsquo;. The TT TT part of the previous command means to create a View called View/TT.pm (the first TT) based on the standard Catalyst::View::TT (the second TT).  For our example, The next step is to create a template in the root/hello directory.We will name it index.tt. The root directory is the default place where Catalyst::View::TT will look for templates. This can be changed by configuration if you really need to.</li>
+<li>Variables that are passed between Controllers and Views are called stash.</li>
+<li>For the &ldquo;sub index&rdquo; part in a controller, if we change it to &ldquo;sub index :Path :Args(1)&rdquo;, it will accept the argument after index. The :Path attribute after index tells Catalyst that this method will handle URL requests that do not mention the method name such as /hello. The Args(1) attribute declares that this action expects one argument.</li>
+<li>If we specified :Local instead of :Path, then Catalyst would map the index action to handle a URL that looks like /hello/index. So, the URL looks like the following <a href="http://localhost/hello/index/Bonjour!,">http://localhost/hello/index/Bonjour!,</a> where Bonjour! is the argument that is being passed to the Controller. If we omitted the attributes (:Local, :Path, and so on), Catalyst would ignore the action entirely and it would be a normal Perl subroutine in the package. If we want to handle any URL with this method, then we can use the :Global attribute.</li>
+<li><p>We also changed the first line of the hello subroutine to receive the parameter within the method. Initially, it looked like  <br/>
+my ( $self, $c ) = @<em>;.  <br/>
+This gets the first two arguments passed to the action by Catalyst, $self and $c. $self is a MyApp::Controller::Hello object and is not of much use right now. $c is the Catalyst context and contains all the information about our application and the current request (and therefore is very useful). Catalyst passes more than just $self and$c though, so we want to modify that line to read
+my ($self, $c, @args)=@</em>;.
+This will allow us to access the rest of the arguments via the @args array.</p></li>
+<li><p>The template that will be rendered is determined by the private name of your action.</p></li>
+<li><p>The stash is a data structure that exists throughout a single Catalyst request. Data you insert into the stash in an action will be available to the View (and other actions). Templates can only access variables that have been explicitly placed here, so it&rsquo;s important to remember to put your useful data in the stash (otherwise it will be gone at the end of the subroutine in the Controller, instead of at the end of the request).</p></li>
+<li><p>You can automatically restart the server when necessary by running the server like     <br/>
+perl script/myapp_server.pl -r -d.  <br/>
+The -r will cause the server to restart when appropriate, and the -d will show debugging information, even if you&rsquo;ve turned it off inside your application. This is especially useful as you will want to deactivate the hardcoded -Debug option in your MyApp.pm, once you are ready to deploy your application.</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/01/09/notes-on-perl/">Notes on Perl</a></h1>
     
     
@@ -99,7 +215,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo; ">
   <div class="entry-content"><ol>
 <li>为了查看某一个模块的版本号， 在命令行下输入以下的内容：
 perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
-<li></li>
 </ol>
 
 </div>
@@ -413,85 +528,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/08/28/network-and-protocol-functions-in-php/">Network and Protocol Functions in PHP</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-28T14:08:00+08:00" pubdate data-updated="true">Aug 28<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ol>
-<li><p>file_get_contents($url);</p></li>
-<li><p>urlencode() function.This function takes a string and converts it to the proper format for an URL</p></li>
-<li><p>parse_url($url)</p></li>
-<li><p>gethostbyname</p></li>
-<li><p>ftp_fget</p></li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/08/24/you-yu-de-xin-qing/">忧郁的心情</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-24T18:46:00+08:00" pubdate data-updated="true">Aug 24<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>忧郁， 毫无斗志。怎么好像每周都有那么会儿啊！要自强不息啊！</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -505,12 +541,20 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
     <section>
   <h1>Category</h1>
   <ul id="categories">
-    <li><a href='/blog/categories/blog'>Blog</a></li><li><a href='/blog/categories/mac'>Mac</a></li><li><a href='/blog/categories/perl'>Perl</a></li><li><a href='/blog/categories/php'>PHP</a></li><li><a href='/blog/categories/think'>Think</a></li><li><a href='/blog/categories/vim-emacs'>vim_emacs</a></li>
+    <li><a href='/blog/categories/blog'>Blog</a></li><li><a href='/blog/categories/catalyst'>Catalyst</a></li><li><a href='/blog/categories/mac'>Mac</a></li><li><a href='/blog/categories/perl'>Perl</a></li><li><a href='/blog/categories/php'>PHP</a></li><li><a href='/blog/categories/think'>Think</a></li><li><a href='/blog/categories/vim-emacs'>vim_emacs</a></li>
   </ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model/">Catalyst 5.8 the Perl MVC Framework Notes&#8211;Creating a Database Model</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes/">Catalyst 5.8 the Perl MVC Framework Notes</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/01/09/notes-on-perl/">Notes on Perl</a>
@@ -522,14 +566,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
     
       <li class="post">
         <a href="/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine/">When Can We Omit the Ampersand While Calling a Subroutine</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/07/some-useful-macos-commands/">Some Useful Macos Commands</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/05/zen-ke-wang-xiang/">怎可妄想</a>
       </li>
     
   </ul>

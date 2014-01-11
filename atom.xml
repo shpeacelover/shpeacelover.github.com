@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-10T21:28:57+08:00</updated>
+  <updated>2014-01-11T17:10:10+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -14,6 +14,69 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Catalyst 5.8 the Perl MVC Framework Notes--Creating a Database Model]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model/"/>
+    <updated>2014-01-11T16:24:03+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model</id>
+    <content type="html"><![CDATA[<ol>
+<li>The command for creating a database model is as the following:</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>perl script/myapp_create.pl model TestDatabase DBIC::Schema MyApp::Schema::TestDatabase create=dynamic dbi:SQLite:tmp/database</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<ol>
+<li>The first argument is the name of the Catalyst Model (TestDatabase). DBIC::Schema is what sort of model we&rsquo;re creating. MyApp::Schema::TestDatabase is where the schema definition will be stored (we won&rsquo;t use the Schema in this example, but real applications will). create=dynamic tells DBIC to read the database every time theapplication is started to determine the schema (layout of tables, foreign key relations, and so on.). The final argument is the DBI connect string for the database.</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Catalyst 5.8 the Perl MVC Framework Notes]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes/"/>
+    <updated>2014-01-11T12:33:25+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes</id>
+    <content type="html"><![CDATA[<ol>
+<li><p>catalyst.pl MyApp    (this command will create the app)</p></li>
+<li><p>Inside the lib directory, there is a file named MyApp.pm, This file defines the namespace and inheritance that are necessary to make this a Catalyst application. It also contains the list of plugins to load application-­specific configurations. These configurations can also be defined in the myapp.conf file in the MyApp directory. However, if the same configuration is mentioned in both the files, then the configuration mentioned here takes precedence.</p></li>
+<li>The file lib/MyApp/Controller/Root.pm will handle all root level (/)URLs. This is where the code that generates the welcome page is located.</li>
+<li>The root directory will hold your templates and other non-­code support files. A subdirectory called /root/static is for static content such as images and stylesheets. Catalyst is set up to serve static files from this directory automatically (under the /static path), thanks toCatalyst::Plugin::Static::Simple.</li>
+<li>The script directory contains the scripts needed to run, test, and modify your application. To note here, the script myapp_create.pl, which is a version of catalyst.pl that&rsquo;s customized for your application. It can create Models, Views, Controllers, tests, and many other things.</li>
+<li><p>The t directory is where your application&rsquo;s automatic tests are stored. By default, you&rsquo;ll have the following three tests:</p>
+
+<ul>
+<li>01app.t, which is a test that passes if your application compiles.</li>
+<li>02pod.t, which will pass if your Plain Old Documentation (POD)embedded API documentation, inside your application, is valid.</li>
+<li>03podcoverage.t, which tests that every public function in your application has some documentation.</li>
+</ul>
+</li>
+<li><p>When a user makes a request using the browser, Catalyst will look for the appropriate method that can handle the request within packages called Controllers.</p></li>
+<li><p>In a controller, there are some automatically created stuff. &ldquo;BEGIN {extends &lsquo;Catalyst::Controller&rsquo;; }&rdquo; is to tell Moose/Perl that this module is a Catalyst Controller. &ldquo;<strong>PACKAGE</strong>&ndash;>meta->make_immutable&rdquo; ells Moose that this module will not change at runtime. This statement is necessary for performance gains and is good practice to mention in every Moose module. Modules must return true when they&rsquo;re loaded,otherwise Perl will assume that the loading has failed and will die with an error message. 1 is always true, so it&rsquo;s conventional to use it for this purpose.</p></li>
+<li>To create a view, we can issue the following command, &lsquo;perl script/myapp_create.pl view TT TT&rsquo;. The TT TT part of the previous command means to create a View called View/TT.pm (the first TT) based on the standard Catalyst::View::TT (the second TT).  For our example, The next step is to create a template in the root/hello directory.We will name it index.tt. The root directory is the default place where Catalyst::View::TT will look for templates. This can be changed by configuration if you really need to.</li>
+<li>Variables that are passed between Controllers and Views are called stash.</li>
+<li>For the &ldquo;sub index&rdquo; part in a controller, if we change it to &ldquo;sub index :Path :Args(1)&rdquo;, it will accept the argument after index. The :Path attribute after index tells Catalyst that this method will handle URL requests that do not mention the method name such as /hello. The Args(1) attribute declares that this action expects one argument.</li>
+<li>If we specified :Local instead of :Path, then Catalyst would map the index action to handle a URL that looks like /hello/index. So, the URL looks like the following <a href="http://localhost/hello/index/Bonjour!,">http://localhost/hello/index/Bonjour!,</a> where Bonjour! is the argument that is being passed to the Controller. If we omitted the attributes (:Local, :Path, and so on), Catalyst would ignore the action entirely and it would be a normal Perl subroutine in the package. If we want to handle any URL with this method, then we can use the :Global attribute.</li>
+<li><p>We also changed the first line of the hello subroutine to receive the parameter within the method. Initially, it looked like  <br/>
+my ( $self, $c ) = @<em>;.  <br/>
+This gets the first two arguments passed to the action by Catalyst, $self and $c. $self is a MyApp::Controller::Hello object and is not of much use right now. $c is the Catalyst context and contains all the information about our application and the current request (and therefore is very useful). Catalyst passes more than just $self and$c though, so we want to modify that line to read
+my ($self, $c, @args)=@</em>;.
+This will allow us to access the rest of the arguments via the @args array.</p></li>
+<li><p>The template that will be rendered is determined by the private name of your action.</p></li>
+<li><p>The stash is a data structure that exists throughout a single Catalyst request. Data you insert into the stash in an action will be available to the View (and other actions). Templates can only access variables that have been explicitly placed here, so it&rsquo;s important to remember to put your useful data in the stash (otherwise it will be gone at the end of the subroutine in the Controller, instead of at the end of the request).</p></li>
+<li><p>You can automatically restart the server when necessary by running the server like     <br/>
+perl script/myapp_server.pl -r -d.  <br/>
+The -r will cause the server to restart when appropriate, and the -d will show debugging information, even if you&rsquo;ve turned it off inside your application. This is especially useful as you will want to deactivate the hardcoded -Debug option in your MyApp.pm, once you are ready to deploy your application.</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Notes on Perl]]></title>
     <link href="http://shpeacelover.github.io/blog/2014/01/09/notes-on-perl/"/>
     <updated>2014-01-09T21:41:24+08:00</updated>
@@ -21,7 +84,6 @@
     <content type="html"><![CDATA[<ol>
 <li>为了查看某一个模块的版本号， 在命令行下输入以下的内容：
 perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
-<li></li>
 </ol>
 
 ]]></content>
@@ -407,62 +469,6 @@ What a shame!</p>
 <p>Being innocent and having fun</p>
 
 <p>(This is one I modified from John Denver&rsquo;s &ldquo;Take Me Home, Country Roads&rdquo; to reminisce my long passed childhood.)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Git常用命令]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/07/23/gitchang-yong-ming-ling/"/>
-    <updated>2013-07-23T18:55:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/07/23/gitchang-yong-ming-ling</id>
-    <content type="html"><![CDATA[<p>以下是自己常用到的git命令:</p>
-
-<p>git init
-git add .
-git commit -a -m &lsquo;comment&rsquo;
-git checkout .
-git stauts
-git remote add origin ssh://user@host/~/git/depot.git
-git push origin master
-git clone some-repository some-path
-git clone &mdash;depth 50 some-repository
-git add -u|&mdash;update
-git add -A|&mdash;all
-git commit -m &ldquo;Some message&rdquo; -a                 (****this will commit all modified files)</p>
-
-<p>Unstage a modified file that’s been staged.
-For example, to undo changes to cache.py, use this:
-prompt> git reset HEAD &mdash; cache.py</p>
-
-<p>Undo all uncommitted changes to a file.
-prompt> git checkout &mdash; cache.py</p>
-
-<p>git config credential.helper &lsquo;cache &mdash;timeout=3600&rsquo;
-(the above will cache our password)</p>
-
-<p>git brach new
-git checkout new
-git checkout -b new</p>
-
-<p>to view all local branches:
-git branch
-to iew all remote branches:
-git branch -r
-to view all branches:
-git branch -a
-to view all that are or are not merged into the current branch :
-git branch &mdash;merged
-git branch &mdash;no-merged</p>
-
-<p>Merge changes from development to the master branch:
-git checkout master
-git merge development</p>
-
-<p>Merge changes, but don’t commit:
-git merge &mdash;no-commit development</p>
-
-<p>Add a one-line log message from each merged commit to the merge message:
-git merge &mdash;log development</p>
 ]]></content>
   </entry>
   

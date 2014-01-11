@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>奇技淫巧之vim匹配括号 - Steven Sun's Blog</title>
+  <title>Catalyst 5.8 the Perl MVC Framework Notes--Creating a Database Model - Steven Sun's Blog</title>
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="今日在和同事交接代码的时候， 因为代码比较长， 所以出现了在看到一个括号的时候， 不知道与它匹配的括号在哪里。 当时使用的是vim， 后来换成了sublime text， 但是还是不知道怎么去找括号的另一半。现在我们就来看看， 怎么在vim中去匹配括号的另一半。 首先把光标定位在一个括号上， &hellip;">
+  <meta name="description" content="The command for creating a database model is as the following: 1
+perl script/myapp_create.pl model TestDatabase DBIC::Schema MyApp::Schema:: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://shpeacelover.github.io/blog/2013/09/04/qi-ji-yin-qiao-zhi-vimpi-pei-gua-hao">
+  <link rel="canonical" href="http://shpeacelover.github.io/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Steven Sun's Blog" type="application/atom+xml">
@@ -68,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">奇技淫巧之vim匹配括号</h1>
+      <h1 class="entry-title">Catalyst 5.8 the Perl MVC Framework Notes--Creating a Database Model</h1>
     
     
       <p class="meta">
@@ -84,16 +85,28 @@
   
 
 
-<time datetime="2013-09-04T10:52:00+08:00" pubdate data-updated="true">Sep 4<span>th</span>, 2013</time>
+<time datetime="2014-01-11T16:24:03+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>今日在和同事交接代码的时候， 因为代码比较长， 所以出现了在看到一个括号的时候， 不知道与它匹配的括号在哪里。 当时使用的是vim， 后来换成了sublime text， 但是还是不知道怎么去找括号的另一半。现在我们就来看看， 怎么在vim中去匹配括号的另一半。</p>
+<div class="entry-content"><ol>
+<li>The command for creating a database model is as the following:</li>
+</ol>
 
-<p>首先把光标定位在一个括号上，在normal模式中, 按shift+5, 亦即%来自动调转到另一个括号上。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>perl script/myapp_create.pl model TestDatabase DBIC::Schema MyApp::Schema::TestDatabase create=dynamic dbi:SQLite:tmp/database</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<ol>
+<li>The first argument is the name of the Catalyst Model (TestDatabase). DBIC::Schema is what sort of model we&rsquo;re creating. MyApp::Schema::TestDatabase is where the schema definition will be stored (we won&rsquo;t use the Schema in this example, but real applications will). create=dynamic tells DBIC to read the database every time theapplication is started to determine the schema (layout of tables, foreign key relations, and so on.). The final argument is the DBI connect string for the database.</li>
+</ol>
+
 </div>
 
 
@@ -116,12 +129,12 @@
   
 
 
-<time datetime="2013-09-04T10:52:00+08:00" pubdate data-updated="true">Sep 4<span>th</span>, 2013</time>
+<time datetime="2014-01-11T16:24:03+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/vim-emacs/'>vim_emacs</a>
+    <a class='category' href='/blog/categories/catalyst/'>Catalyst</a>
   
 </span>
 
@@ -130,7 +143,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shpeacelover.github.io/blog/2013/09/04/qi-ji-yin-qiao-zhi-vimpi-pei-gua-hao/" data-via="" data-counturl="http://shpeacelover.github.io/blog/2013/09/04/qi-ji-yin-qiao-zhi-vimpi-pei-gua-hao/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shpeacelover.github.io/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model/" data-via="" data-counturl="http://shpeacelover.github.io/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model/" >Tweet</a>
   
   
   
@@ -139,10 +152,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/08/28/practical-vim-chap04-visual-mode/" title="Previous Post: practical vim --chap04 Visual Mode">&laquo; practical vim --chap04 Visual Mode</a>
+        <a class="basic-alignment left" href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes/" title="Previous Post: Catalyst 5.8 The Perl MVC Framework Notes ">&laquo; Catalyst 5.8 The Perl MVC Framework Notes </a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/09/05/zen-ke-wang-xiang/" title="Next Post: 怎可妄想">怎可妄想 &raquo;</a>
       
     </p>
   </footer>
