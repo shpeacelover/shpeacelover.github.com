@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Catalyst Manual Tutorial Notes - Steven Sun's Blog</title>
+  <meta name="author" content="Steven Sun">
+
+  
+  <meta name="description" content="Make sure when adding new plugins you also include them as a new dependency within the Makefile.PL file.
+When specifying plugins, you can omit &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://shpeacelover.github.io/blog/2014/01/14/catalyst-manual-tutorial-notes">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Steven Sun's Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Steven Sun's Blog</a></h1>
+  
+    <h2>A dream land of peace.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:shpeacelover.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Catalyst Manual Tutorial Notes</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-14T17:01:10+08:00" pubdate data-updated="true">Jan 14<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><ol>
+<li><p>Make sure when adding new plugins you also include them as a new dependency within the Makefile.PL file.</p></li>
+<li><p>When specifying plugins, you can omit Catalyst::Plugin:: from the name.</p></li>
+<li><p>You should refer to &ldquo;Action-types&rdquo; in Catalyst::Manual::Intro for additional information and for coverage of some lesser-used action types not discussed here (Regex and LocalRegex).</p></li>
+<li><p>Although DBIx::Class has included support for a create=dynamic mode to automatically read the database structure every time the application starts, its use is no longer recommended.</p></li>
+<li><p>lib/MyApp contains a Schema subdirectory, which then has a subdirectory called &ldquo;Result&rdquo;. This &ldquo;Result&rdquo; subdirectory then has files named according to each of the tables in our simple database (Author.pm, BookAuthor.pm, and Book.pm). These three files are called &ldquo;Result Classes&rdquo; (or &ldquo;ResultSource Classes&rdquo;) in DBIx::Class nomenclature. Although the Result Class files are named after tables in our database, the classes correspond to the row-level data that is returned by DBIC.</p></li>
+<li><p>Also note the &ldquo;flow&rdquo; of the model information across the various files and directories. Catalyst will initially load the model from lib/MyApp/Model/DB.pm. This file contains a reference to lib/MyApp/Schema.pm, so that file is loaded next. Finally, the call to load_namespaces in Schema.pm will load each of the &ldquo;Result Class&rdquo; files from the lib/MyApp/Schema/Result subdirectory. The final outcome is that Catalyst will dynamically create three table-specific Catalyst models every time the application starts (you can see these three model files listed in the debug output generated when you launch the application).</p></li>
+<li><p>The Catalyst stash only lasts for a single HTTP request. If you need to retain information across requests you can use Catalyst::Plugin::Session.</p></li>
+<li><p>You cannot define a many_to_many relationship bridge without also having the has_many relationship in place.</p></li>
+<li><p>At the end of a given user request, Catalyst will call the most specific end method that&rsquo;s appropriate. For example, if the controller for a request has an end method defined, it will be called. However, if the controller does not define a controller-specific end method, the &ldquo;global&rdquo; end method in Root.pm will be called.</p></li>
+<li><p>Catalyst takes &ldquo;extra slash-separated information&rdquo; from the URL and passes it as arguments in @_ (as long as the number of arguments is not &ldquo;fixed&rdquo; using an attribute like :Args(0)).</p></li>
+<li><p>Chaining lets you have a single URL automatically dispatch to several controller methods, each of which can have precise control over the number of arguments that it will receive.  A chain can essentially be thought of having three parts &mdash; a beginning, a middle, and an end.</p></li>
+<li><p>In practice you should never use a GET request to delete a record &mdash; always use POST for actions that will modify data.</p></li>
+<li><p>There are several ways to pass information across a redirect. One option is to use the flash technique.</p></li>
+<li><p>It is generally recommended (partly for historical reasons, and partly for code clarity) only to use default in MyApp::Controller::Root, and then mainly to generate the 404 not found page for the application.</p></li>
+<li><p>Flash allows you to set variables in a way that is very similar to stash, but it will remain set across multiple requests. Once the value is read, it is cleared (unless reset).</p></li>
+<li><p>If you want to keep your existing method, you can create a new copy and comment out the original by making it look like a Pod comment. For example, put something like =begin before sub add : Local { and =end after the closing }.</p></li>
+<li><p>For debugging techniques in Catalyst, please visit the page &ldquo;<a href="https://metacpan.org/pod/Catalyst::Manual::Tutorial::07_Debugging">https://metacpan.org/pod/Catalyst::Manual::Tutorial::07_Debugging</a>&rdquo;. We can also find information about how to &ldquo;Check the version of an installed module&rdquo; and how to &ldquo;Check if a modules contains a given method&rdquo;.</p></li>
+<li><p>If you want to use MySQL or postgresql in catalyst, please refer to the following url, &ldquo;<a href="https://metacpan.org/pod/Catalyst::Manual::Tutorial::10_Appendices">https://metacpan.org/pod/Catalyst::Manual::Tutorial::10_Appendices</a>&rdquo;.</p></li>
+</ol>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Steven Sun</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-14T17:01:10+08:00" pubdate data-updated="true">Jan 14<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/catalyst/'>Catalyst</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shpeacelover.github.io/blog/2014/01/14/catalyst-manual-tutorial-notes/" data-via="" data-counturl="http://shpeacelover.github.io/blog/2014/01/14/catalyst-manual-tutorial-notes/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model/" title="Previous Post: Catalyst 5.8 The Perl MVC Framework Notes--Creating a database model">&laquo; Catalyst 5.8 The Perl MVC Framework Notes--Creating a database model</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Category</h1>
+  <ul id="categories">
+    <li><a href='/blog/categories/blog'>Blog</a></li><li><a href='/blog/categories/catalyst'>Catalyst</a></li><li><a href='/blog/categories/mac'>Mac</a></li><li><a href='/blog/categories/perl'>Perl</a></li><li><a href='/blog/categories/php'>PHP</a></li><li><a href='/blog/categories/think'>Think</a></li><li><a href='/blog/categories/vim-emacs'>vim_emacs</a></li>
+  </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/14/catalyst-manual-tutorial-notes/">Catalyst Manual Tutorial Notes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model/">Catalyst 5.8 the Perl MVC Framework Notes--Creating a Database Model</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes/">Catalyst 5.8 the Perl MVC Framework Notes</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/09/notes-on-perl/">Notes on Perl</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/09/new-year-resolution/">New Year's Resolution</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>About Me</h1>
+	<p>A little something about me.</p>
+	<p>My name is Steven Sun(孙广新)<br/>
+		I am interested in coding.<br/>
+		I like Perl, Python, PHP, Ruby, Linux, MAC OS.<br/>
+	</p>
+	<p>Github: <a href="https://github.com/shpeacelover">Github</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Steven Sun -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

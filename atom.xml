@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-11T17:10:10+08:00</updated>
+  <updated>2014-01-15T20:49:42+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Catalyst Manual Tutorial Notes]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/14/catalyst-manual-tutorial-notes/"/>
+    <updated>2014-01-14T17:01:10+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/14/catalyst-manual-tutorial-notes</id>
+    <content type="html"><![CDATA[<ol>
+<li><p>Make sure when adding new plugins you also include them as a new dependency within the Makefile.PL file.</p></li>
+<li><p>When specifying plugins, you can omit Catalyst::Plugin:: from the name.</p></li>
+<li><p>You should refer to &ldquo;Action-types&rdquo; in Catalyst::Manual::Intro for additional information and for coverage of some lesser-used action types not discussed here (Regex and LocalRegex).</p></li>
+<li><p>Although DBIx::Class has included support for a create=dynamic mode to automatically read the database structure every time the application starts, its use is no longer recommended.</p></li>
+<li><p>lib/MyApp contains a Schema subdirectory, which then has a subdirectory called &ldquo;Result&rdquo;. This &ldquo;Result&rdquo; subdirectory then has files named according to each of the tables in our simple database (Author.pm, BookAuthor.pm, and Book.pm). These three files are called &ldquo;Result Classes&rdquo; (or &ldquo;ResultSource Classes&rdquo;) in DBIx::Class nomenclature. Although the Result Class files are named after tables in our database, the classes correspond to the row-level data that is returned by DBIC.</p></li>
+<li><p>Also note the &ldquo;flow&rdquo; of the model information across the various files and directories. Catalyst will initially load the model from lib/MyApp/Model/DB.pm. This file contains a reference to lib/MyApp/Schema.pm, so that file is loaded next. Finally, the call to load_namespaces in Schema.pm will load each of the &ldquo;Result Class&rdquo; files from the lib/MyApp/Schema/Result subdirectory. The final outcome is that Catalyst will dynamically create three table-specific Catalyst models every time the application starts (you can see these three model files listed in the debug output generated when you launch the application).</p></li>
+<li><p>The Catalyst stash only lasts for a single HTTP request. If you need to retain information across requests you can use Catalyst::Plugin::Session.</p></li>
+<li><p>You cannot define a many_to_many relationship bridge without also having the has_many relationship in place.</p></li>
+<li><p>At the end of a given user request, Catalyst will call the most specific end method that&rsquo;s appropriate. For example, if the controller for a request has an end method defined, it will be called. However, if the controller does not define a controller-specific end method, the &ldquo;global&rdquo; end method in Root.pm will be called.</p></li>
+<li><p>Catalyst takes &ldquo;extra slash-separated information&rdquo; from the URL and passes it as arguments in @_ (as long as the number of arguments is not &ldquo;fixed&rdquo; using an attribute like :Args(0)).</p></li>
+<li><p>Chaining lets you have a single URL automatically dispatch to several controller methods, each of which can have precise control over the number of arguments that it will receive.  A chain can essentially be thought of having three parts &mdash; a beginning, a middle, and an end.</p></li>
+<li><p>In practice you should never use a GET request to delete a record &mdash; always use POST for actions that will modify data.</p></li>
+<li><p>There are several ways to pass information across a redirect. One option is to use the flash technique.</p></li>
+<li><p>It is generally recommended (partly for historical reasons, and partly for code clarity) only to use default in MyApp::Controller::Root, and then mainly to generate the 404 not found page for the application.</p></li>
+<li><p>Flash allows you to set variables in a way that is very similar to stash, but it will remain set across multiple requests. Once the value is read, it is cleared (unless reset).</p></li>
+<li><p>If you want to keep your existing method, you can create a new copy and comment out the original by making it look like a Pod comment. For example, put something like =begin before sub add : Local { and =end after the closing }.</p></li>
+<li><p>For debugging techniques in Catalyst, please visit the page &ldquo;<a href="https://metacpan.org/pod/Catalyst::Manual::Tutorial::07_Debugging">https://metacpan.org/pod/Catalyst::Manual::Tutorial::07_Debugging</a>&rdquo;. We can also find information about how to &ldquo;Check the version of an installed module&rdquo; and how to &ldquo;Check if a modules contains a given method&rdquo;.</p></li>
+<li><p>If you want to use MySQL or postgresql in catalyst, please refer to the following url, &ldquo;<a href="https://metacpan.org/pod/Catalyst::Manual::Tutorial::10_Appendices">https://metacpan.org/pod/Catalyst::Manual::Tutorial::10_Appendices</a>&rdquo;.</p></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Catalyst 5.8 the Perl MVC Framework Notes--Creating a Database Model]]></title>
@@ -82,7 +111,7 @@ The -r will cause the server to restart when appropriate, and the -d will show d
     <updated>2014-01-09T21:41:24+08:00</updated>
     <id>http://shpeacelover.github.io/blog/2014/01/09/notes-on-perl</id>
     <content type="html"><![CDATA[<ol>
-<li>为了查看某一个模块的版本号， 在命令行下输入以下的内容：
+<li>为了查看某一个模块的版本号， 在命令行下输入以下的内容： <br/>
 perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 </ol>
 
@@ -436,39 +465,6 @@ What a shame!</p>
     <updated>2013-08-05T17:13:00+08:00</updated>
     <id>http://shpeacelover.github.io/blog/2013/08/05/fen-dou</id>
     <content type="html"><![CDATA[<p>偶尔的心灰意冷算得了什么？人生短短几十载，吃点苦， 受点累又怎样？ 如果年轻时不努力奋进，难道等到进了天堂后再去忏悔？</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Country Road]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/07/23/country-road/"/>
-    <updated>2013-07-23T21:20:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/07/23/country-road</id>
-    <content type="html"><![CDATA[<p>Almost heaven, my hometown</p>
-
-<p>To me as a child</p>
-
-<p>Boundless  farmland</p>
-
-<p>Smooth brook</p>
-
-<p>Life is old there</p>
-
-<p>Older than the trees</p>
-
-<p>Younger than the mountains</p>
-
-<p>Growin&#8217; like a breeze</p>
-
-<p>Country Roads, take me home</p>
-
-<p>To the place I belong</p>
-
-<p>Like I never go beyond</p>
-
-<p>Being innocent and having fun</p>
-
-<p>(This is one I modified from John Denver&rsquo;s &ldquo;Take Me Home, Country Roads&rdquo; to reminisce my long passed childhood.)</p>
 ]]></content>
   </entry>
   

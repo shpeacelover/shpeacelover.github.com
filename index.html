@@ -9,8 +9,8 @@
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="The command for creating a database model is as the following: 1
-perl script/myapp_create.pl model TestDatabase DBIC::Schema MyApp::Schema:: &hellip;">
+  <meta name="description" content="Make sure when adding new plugins you also include them as a new dependency within the Makefile.PL file.
+When specifying plugins, you can omit &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,62 @@ perl script/myapp_create.pl model TestDatabase DBIC::Schema MyApp::Schema:: &hel
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/14/catalyst-manual-tutorial-notes/">Catalyst Manual Tutorial Notes</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-14T17:01:10+08:00" pubdate data-updated="true">Jan 14<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ol>
+<li><p>Make sure when adding new plugins you also include them as a new dependency within the Makefile.PL file.</p></li>
+<li><p>When specifying plugins, you can omit Catalyst::Plugin:: from the name.</p></li>
+<li><p>You should refer to &ldquo;Action-types&rdquo; in Catalyst::Manual::Intro for additional information and for coverage of some lesser-used action types not discussed here (Regex and LocalRegex).</p></li>
+<li><p>Although DBIx::Class has included support for a create=dynamic mode to automatically read the database structure every time the application starts, its use is no longer recommended.</p></li>
+<li><p>lib/MyApp contains a Schema subdirectory, which then has a subdirectory called &ldquo;Result&rdquo;. This &ldquo;Result&rdquo; subdirectory then has files named according to each of the tables in our simple database (Author.pm, BookAuthor.pm, and Book.pm). These three files are called &ldquo;Result Classes&rdquo; (or &ldquo;ResultSource Classes&rdquo;) in DBIx::Class nomenclature. Although the Result Class files are named after tables in our database, the classes correspond to the row-level data that is returned by DBIC.</p></li>
+<li><p>Also note the &ldquo;flow&rdquo; of the model information across the various files and directories. Catalyst will initially load the model from lib/MyApp/Model/DB.pm. This file contains a reference to lib/MyApp/Schema.pm, so that file is loaded next. Finally, the call to load_namespaces in Schema.pm will load each of the &ldquo;Result Class&rdquo; files from the lib/MyApp/Schema/Result subdirectory. The final outcome is that Catalyst will dynamically create three table-specific Catalyst models every time the application starts (you can see these three model files listed in the debug output generated when you launch the application).</p></li>
+<li><p>The Catalyst stash only lasts for a single HTTP request. If you need to retain information across requests you can use Catalyst::Plugin::Session.</p></li>
+<li><p>You cannot define a many_to_many relationship bridge without also having the has_many relationship in place.</p></li>
+<li><p>At the end of a given user request, Catalyst will call the most specific end method that&rsquo;s appropriate. For example, if the controller for a request has an end method defined, it will be called. However, if the controller does not define a controller-specific end method, the &ldquo;global&rdquo; end method in Root.pm will be called.</p></li>
+<li><p>Catalyst takes &ldquo;extra slash-separated information&rdquo; from the URL and passes it as arguments in @_ (as long as the number of arguments is not &ldquo;fixed&rdquo; using an attribute like :Args(0)).</p></li>
+<li><p>Chaining lets you have a single URL automatically dispatch to several controller methods, each of which can have precise control over the number of arguments that it will receive.  A chain can essentially be thought of having three parts &mdash; a beginning, a middle, and an end.</p></li>
+<li><p>In practice you should never use a GET request to delete a record &mdash; always use POST for actions that will modify data.</p></li>
+<li><p>There are several ways to pass information across a redirect. One option is to use the flash technique.</p></li>
+<li><p>It is generally recommended (partly for historical reasons, and partly for code clarity) only to use default in MyApp::Controller::Root, and then mainly to generate the 404 not found page for the application.</p></li>
+<li><p>Flash allows you to set variables in a way that is very similar to stash, but it will remain set across multiple requests. Once the value is read, it is cleared (unless reset).</p></li>
+<li><p>If you want to keep your existing method, you can create a new copy and comment out the original by making it look like a Pod comment. For example, put something like =begin before sub add : Local { and =end after the closing }.</p></li>
+<li><p>For debugging techniques in Catalyst, please visit the page &ldquo;<a href="https://metacpan.org/pod/Catalyst::Manual::Tutorial::07_Debugging">https://metacpan.org/pod/Catalyst::Manual::Tutorial::07_Debugging</a>&rdquo;. We can also find information about how to &ldquo;Check the version of an installed module&rdquo; and how to &ldquo;Check if a modules contains a given method&rdquo;.</p></li>
+<li><p>If you want to use MySQL or postgresql in catalyst, please refer to the following url, &ldquo;<a href="https://metacpan.org/pod/Catalyst::Manual::Tutorial::10_Appendices">https://metacpan.org/pod/Catalyst::Manual::Tutorial::10_Appendices</a>&rdquo;.</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -213,7 +269,7 @@ The -r will cause the server to restart when appropriate, and the -d will show d
 
 
   <div class="entry-content"><ol>
-<li>为了查看某一个模块的版本号， 在命令行下输入以下的内容：
+<li>为了查看某一个模块的版本号， 在命令行下输入以下的内容： <br/>
 perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 </ol>
 
@@ -486,48 +542,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/08/28/practical-vim-chap02-normal-mode/">Practical Vim &#8211;chap02 Normal Mode</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-28T14:43:00+08:00" pubdate data-updated="true">Aug 28<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ol>
-<li><p>if there is a line and it is in normal mode, like &ldquo;hello, everyone, this is steven sun&rdquo;. now if you position your cursor on the &ldquo;s&rdquo; of &ldquo;steven sun&rdquo; and then type &ldquo;c2w&rdquo;, you will enter into the &ldquo;insert mode&rdquo; and will be prompted to enter some text.</p></li>
-<li><p>use dap to delete a paragraph, use daw to  delete a  word, use dal to delete a  single character;</p></li>
-<li><p>we can type :h operator to find those information about operators in vim.</p></li>
-<li><p>an action is composed from an operator followed by a motion.</p></li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -549,6 +563,10 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/01/14/catalyst-manual-tutorial-notes/">Catalyst Manual Tutorial Notes</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model/">Catalyst 5.8 the Perl MVC Framework Notes&#8211;Creating a Database Model</a>
       </li>
     
@@ -562,10 +580,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
     
       <li class="post">
         <a href="/blog/2014/01/09/new-year-resolution/">New Year&#8217;s Resolution</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine/">When Can We Omit the Ampersand While Calling a Subroutine</a>
       </li>
     
   </ul>
