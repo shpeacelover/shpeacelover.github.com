@@ -98,3 +98,9 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+#category
+category_list: true
+category_counter: true
+category_title: Category
+category_sidebar: true
+category_tag_cloud: true

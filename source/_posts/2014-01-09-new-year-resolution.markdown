@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "new year resolution"
+title: "new year's resolution"
 date: 2014-01-09 20:33:07 +0800
 comments: true
 categories: Think
