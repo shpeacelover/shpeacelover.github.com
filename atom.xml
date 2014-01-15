@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-15T20:49:42+08:00</updated>
+  <updated>2014-01-15T20:54:41+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Yaml Exception Reading Errors]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/15/yaml-exception-reading-errors/"/>
+    <updated>2014-01-15T20:50:41+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/15/yaml-exception-reading-errors</id>
+    <content type="html"><![CDATA[<p>When I use the &ldquo;rake generate&rdquo; command, sometimes I will get this error like, &ldquo;YAML Exception reading&rdquo;. We can solve this problem by following the method below.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export LC_ALL=en_US.UTF-8    
+</span><span class='line'>export LANG=en_US.UTF-8
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Catalyst Manual Tutorial Notes]]></title>
@@ -456,15 +472,6 @@ What a shame!</p>
 <p>虽然如此， 但是自己也已经啃了这些硬骨头有段日子了。 虽然很多东西仍然不甚了解， 但是如果不坚持下去， 就会又是只知道个皮毛。 那就又等于浪费了很多宝贵的时间去做无用功了。</p>
 
 <p>告诉自己，必须坚持下去， 多思考，多看书， 多编程。 会有结果的。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[奋斗]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/08/05/fen-dou/"/>
-    <updated>2013-08-05T17:13:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/08/05/fen-dou</id>
-    <content type="html"><![CDATA[<p>偶尔的心灰意冷算得了什么？人生短短几十载，吃点苦， 受点累又怎样？ 如果年轻时不努力奋进，难道等到进了天堂后再去忏悔？</p>
 ]]></content>
   </entry>
   

@@ -9,8 +9,7 @@
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="Make sure when adding new plugins you also include them as a new dependency within the Makefile.PL file.
-When specifying plugins, you can omit &hellip;">
+  <meta name="description" content="When I use the &ldquo;rake generate&rdquo; command, sometimes I will get this error like, &ldquo;YAML Exception reading&rdquo;. We can solve this &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,49 @@ When specifying plugins, you can omit &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/15/yaml-exception-reading-errors/">Yaml Exception Reading Errors</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-15T20:50:41+08:00" pubdate data-updated="true">Jan 15<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When I use the &ldquo;rake generate&rdquo; command, sometimes I will get this error like, &ldquo;YAML Exception reading&rdquo;. We can solve this problem by following the method below.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export LC_ALL=en_US.UTF-8    
+</span><span class='line'>export LANG=en_US.UTF-8
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -486,62 +528,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/08/28/practical-vim-chap04-visual-mode/">Practical Vim &#8211;chap04 Visual Mode</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-28T15:38:00+08:00" pubdate data-updated="true">Aug 28<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ol>
-<li><p>Vim’s Visual mode allows us to define a selection of text and then operate upon it.</p></li>
-<li><p>ways to enabling visual modes:</p></li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>v Enable character-wise Visual mode
-</span><span class='line'>V Enable line-wise Visual mode
-</span><span class='line'>&lt;C-v&gt; Enable block-wise Visual mode
-</span><span class='line'>gv Reselect the last visual selection</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li><p>the &lsquo;gv&rsquo; command isreselects the range of text that was last selected in Visual mode. No matter whether the previous selection was character-wise, line-wise, or block-wise, the gv command should do the right thing. The only case where it might get confused is if the last selection has since been deleted.</p></li>
-<li><p>if there is a html tag, like &ldquo;<a href="#">three</a>&rdquo;, type vit in normal mode, will get you put your cursor into the &lsquo;h&rsquo; character of the word &ldquo;three&rdquo;. vit means &ldquo;visually select inside the tag&rdquo;</p></li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -563,6 +549,10 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/01/15/yaml-exception-reading-errors/">Yaml Exception Reading Errors</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/14/catalyst-manual-tutorial-notes/">Catalyst Manual Tutorial Notes</a>
       </li>
     
@@ -576,10 +566,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
     
       <li class="post">
         <a href="/blog/2014/01/09/notes-on-perl/">Notes on Perl</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/09/new-year-resolution/">New Year&#8217;s Resolution</a>
       </li>
     
   </ul>
