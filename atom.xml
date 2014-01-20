@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-16T15:42:26+08:00</updated>
+  <updated>2014-01-20T17:07:18+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[今天她骂了我， 好开心]]></title>
-    <link href="http://shpeacelover.github.io/blog/2014/01/16/jin-tian-ta-ma-liao-wo-%2C-hao-kai-xin/"/>
-    <updated>2014-01-16T15:39:54+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2014/01/16/jin-tian-ta-ma-liao-wo-,-hao-kai-xin</id>
-    <content type="html"><![CDATA[<p>今天她说她并不了解我， 我来了句难道要我把衣服脱了你才能了解啊。 她来了句： 龌龊。 但是她说的时候语气听起来好甜蜜啊。真希望她多骂我几句！！！！</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Yaml Exception Reading Errors]]></title>
@@ -466,6 +457,21 @@ What a shame!</p>
 10. git add .
 11. git commit -m &lsquo;your comment&rsquo;
 12. git push origin source</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[反省]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/08/05/fan-sheng/"/>
+    <updated>2013-08-05T17:27:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/08/05/fan-sheng</id>
+    <content type="html"><![CDATA[<p>之前在学Django的时候， 觉得挺难的， 并不像网络上有的人所说的那样的简单。结果是没有坚持下来。</p>
+
+<p>现在在学Ruby还有Ruby On Rails，觉得愈加的难了。 毕竟自己之前对于Python以及Django的了解要多于对Ruby和Rails的了解。</p>
+
+<p>虽然如此， 但是自己也已经啃了这些硬骨头有段日子了。 虽然很多东西仍然不甚了解， 但是如果不坚持下去， 就会又是只知道个皮毛。 那就又等于浪费了很多宝贵的时间去做无用功了。</p>
+
+<p>告诉自己，必须坚持下去， 多思考，多看书， 多编程。 会有结果的。</p>
 ]]></content>
   </entry>
   
