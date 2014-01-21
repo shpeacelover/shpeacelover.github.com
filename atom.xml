@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-20T19:15:49+08:00</updated>
+  <updated>2014-01-21T20:16:19+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Oh My Love Lyrics]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/21/oh-my-love-lyrics/"/>
+    <updated>2014-01-21T20:06:52+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/21/oh-my-love-lyrics</id>
+    <content type="html"><![CDATA[<p>听到John Lennon的“Oh my love”， 歌词还有曲调给人一种非常空旷的额感觉。现在就把歌词摘抄如下。</p>
+
+<p>Oh my love for the first time in my life, <br/>
+my eyes are wide open.</p>
+
+<p>Oh my love for the first time in my life,  <br/>
+my eyes can see.</p>
+
+<p>I see the wind, I see the trees, everything is clear in my heart.</p>
+
+<p>I see the clouds, I see the sky, everything is clear in our world.</p>
+
+<p>Oh my lover for the first time in my life, my mind is wide open.</p>
+
+<p>Oh my lover for the first time in my life, my mind can feel.</p>
+
+<p>I feel sorrow, I feel dreams, everything is clear in my heart.</p>
+
+<p>I feel life, I feel love, everything is clear in our world.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Yaml Exception Reading Errors]]></title>
@@ -457,21 +484,6 @@ What a shame!</p>
 10. git add .
 11. git commit -m &lsquo;your comment&rsquo;
 12. git push origin source</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[反省]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/08/05/fan-sheng/"/>
-    <updated>2013-08-05T17:27:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/08/05/fan-sheng</id>
-    <content type="html"><![CDATA[<p>之前在学Django的时候， 觉得挺难的， 并不像网络上有的人所说的那样的简单。结果是没有坚持下来。</p>
-
-<p>现在在学Ruby还有Ruby On Rails，觉得愈加的难了。 毕竟自己之前对于Python以及Django的了解要多于对Ruby和Rails的了解。</p>
-
-<p>虽然如此， 但是自己也已经啃了这些硬骨头有段日子了。 虽然很多东西仍然不甚了解， 但是如果不坚持下去， 就会又是只知道个皮毛。 那就又等于浪费了很多宝贵的时间去做无用功了。</p>
-
-<p>告诉自己，必须坚持下去， 多思考，多看书， 多编程。 会有结果的。</p>
 ]]></content>
   </entry>
   
