@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-21T20:18:40+08:00</updated>
+  <updated>2014-01-23T12:44:09+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Some Random Notes on the Dancer Framework]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/23/some-random-notes-on-the-dancer-framework/"/>
+    <updated>2014-01-23T11:02:30+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/23/some-random-notes-on-the-dancer-framework</id>
+    <content type="html"><![CDATA[<p>I write this post to keep notes of those little knowledge snippets when I am learning Dancer, the Perl web framework.</p>
+
+<ol>
+<li><p>Templates all go into the views/ directory. Optionally, you can create a &ldquo;layout&rdquo; template which provides a consistent look and feel for all of your views.</p></li>
+<li><p>If we have some code like &ldquo;&lsquo;msg&rsquo; => get_flash()&rdquo;, this means we have a msg field which displays a message to the user when an event happens like a new entry is posted, or the user logs in or out. It&rsquo;s called a &ldquo;flash&rdquo; message because we only want to display it one time, not every time the / URL is rendered.</p></li>
+<li><p>The uri_for directive tells Dancer to provide a URI for that specific route. You might ask why we don&rsquo;t simply hardcode the /add URI in our application or templates. The best reason not to do that is because it removes a layer of flexibility on where to &ldquo;mount&rdquo; the web application. Although the application is coded to use the root URL / it might be better in the future to locate it under its own URL route &ndash; at that point we&rsquo;d have to go through our application and the templates and update the URLs and hope we didn&rsquo;t miss any of them. By using the uri_for Dancer method, we can easily load the application wherever we like and not have to modify the application at all.</p></li>
+<li><p>We will use the format like &ldquo;insert into entries (title, text) values (?, ?)&rdquo; to be sure our application won&rsquo;t be vulnerable to SQL injection.</p></li>
+<li><p>If we have some like &ldquo;any [&lsquo;get&rsquo;, &lsquo;post&rsquo;] => &lsquo;/login&rsquo; => sub {}&rdquo;, here a GET for a human browsing to the URL and a POST for the browser to submit the user&rsquo;s input to the web application.</p></li>
+<li><p>session->destroy; is Dancer&rsquo;s way to remove a stored session.</p></li>
+<li><p>If we have some code like &ldquo;set layout => &lsquo;main&rsquo;&rdquo;, what this tells Dancer&rsquo;s template engine is that it should look for a file called main.tt in myapp/views/layouts/ and insert the calls from the template directive into a template parameter called content.</p></li>
+<li><p>The &ldquo;before_template_render&rdquo; provides a way to manipulate the template parameters before they&rsquo;re passed to the engine for processing.</p></li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Oh My Love Lyrics]]></title>
@@ -463,27 +484,6 @@ What a shame!</p>
 <p>:new&nbsp;&nbsp;建立水平视窗</p>
 
 <p>:vnew&nbsp;&nbsp;建立垂直视窗</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[怎样把 Github上 的 Octopress Clone 到本地以及发布博客]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/08/05/zen-yang-ba-githubshang-de-octopress-clone-dao-ben-di-yi-ji-fa-bu-bo-ke/"/>
-    <updated>2013-08-05T17:41:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/08/05/zen-yang-ba-githubshang-de-octopress-clone-dao-ben-di-yi-ji-fa-bu-bo-ke</id>
-    <content type="html"><![CDATA[<p>力求精简， 步骤如下：
-1. git clone -b source <a href="https://github.com/shpeacelover/shpeacelover.github.com">https://github.com/shpeacelover/shpeacelover.github.com</a> octopress
-2. cd octopress
-3. git clone <a href="https://github.com/shpeacelover/shpeacelover.github.com">https://github.com/shpeacelover/shpeacelover.github.com</a> _deploy
-4. sudo gem install bundler
-5. bundle install
-6. rake new_post[&ldquo;The Title of Your Article&rdquo;]
-7. bundle exec rake generate
-8. bundle exec rake preview
-9. bundle exec rake deploy
-10. git add .
-11. git commit -m &lsquo;your comment&rsquo;
-12. git push origin source</p>
 ]]></content>
   </entry>
   

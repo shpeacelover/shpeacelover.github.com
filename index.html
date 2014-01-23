@@ -9,7 +9,7 @@
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="听到John Lennon的“Oh my love”， 歌词还有曲调给人一种非常空旷的感觉。现在就把歌词摘抄如下。 Oh my love for the first time in my life, my eyes are wide open. Oh my love for the first &hellip;">
+  <meta name="description" content="I write this post to keep notes of those little knowledge snippets when I am learning Dancer, the Perl web framework. Templates all go into the views &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,54 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/23/some-random-notes-on-the-dancer-framework/">Some Random Notes on the Dancer Framework</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-23T11:02:30+08:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I write this post to keep notes of those little knowledge snippets when I am learning Dancer, the Perl web framework.</p>
+
+<ol>
+<li><p>Templates all go into the views/ directory. Optionally, you can create a &ldquo;layout&rdquo; template which provides a consistent look and feel for all of your views.</p></li>
+<li><p>If we have some code like &ldquo;&lsquo;msg&rsquo; => get_flash()&rdquo;, this means we have a msg field which displays a message to the user when an event happens like a new entry is posted, or the user logs in or out. It&rsquo;s called a &ldquo;flash&rdquo; message because we only want to display it one time, not every time the / URL is rendered.</p></li>
+<li><p>The uri_for directive tells Dancer to provide a URI for that specific route. You might ask why we don&rsquo;t simply hardcode the /add URI in our application or templates. The best reason not to do that is because it removes a layer of flexibility on where to &ldquo;mount&rdquo; the web application. Although the application is coded to use the root URL / it might be better in the future to locate it under its own URL route &ndash; at that point we&rsquo;d have to go through our application and the templates and update the URLs and hope we didn&rsquo;t miss any of them. By using the uri_for Dancer method, we can easily load the application wherever we like and not have to modify the application at all.</p></li>
+<li><p>We will use the format like &ldquo;insert into entries (title, text) values (?, ?)&rdquo; to be sure our application won&rsquo;t be vulnerable to SQL injection.</p></li>
+<li><p>If we have some like &ldquo;any [&lsquo;get&rsquo;, &lsquo;post&rsquo;] => &lsquo;/login&rsquo; => sub {}&rdquo;, here a GET for a human browsing to the URL and a POST for the browser to submit the user&rsquo;s input to the web application.</p></li>
+<li><p>session->destroy; is Dancer&rsquo;s way to remove a stored session.</p></li>
+<li><p>If we have some code like &ldquo;set layout => &lsquo;main&rsquo;&rdquo;, what this tells Dancer&rsquo;s template engine is that it should look for a file called main.tt in myapp/views/layouts/ and insert the calls from the template directive into a template parameter called content.</p></li>
+<li><p>The &ldquo;before_template_render&rdquo; provides a way to manipulate the template parameters before they&rsquo;re passed to the engine for processing.</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -508,42 +556,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/09/05/zen-ke-wang-xiang/">怎可妄想</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-05T11:12:00+08:00" pubdate data-updated="true">Sep 5<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>一个人不成熟的标志， 或许就是， 有的东西明知不属于自己， 却还痴心妄想， 可笑， 可悲， 可叹.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -557,12 +569,16 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
     <section>
   <h1>Category</h1>
   <ul id="categories">
-    <li><a href='/blog/categories/blog'>Blog</a></li><li><a href='/blog/categories/catalyst'>Catalyst</a></li><li><a href='/blog/categories/life'>Life</a></li><li><a href='/blog/categories/mac'>Mac</a></li><li><a href='/blog/categories/perl'>Perl</a></li><li><a href='/blog/categories/php'>PHP</a></li><li><a href='/blog/categories/think'>Think</a></li><li><a href='/blog/categories/vim-emacs'>vim_emacs</a></li>
+    <li><a href='/blog/categories/blog'>Blog</a></li><li><a href='/blog/categories/catalyst'>Catalyst</a></li><li><a href='/blog/categories/dancer'>Dancer</a></li><li><a href='/blog/categories/life'>Life</a></li><li><a href='/blog/categories/mac'>Mac</a></li><li><a href='/blog/categories/perl'>Perl</a></li><li><a href='/blog/categories/php'>PHP</a></li><li><a href='/blog/categories/think'>Think</a></li><li><a href='/blog/categories/vim-emacs'>vim_emacs</a></li>
   </ul>
 </section>
 <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/23/some-random-notes-on-the-dancer-framework/">Some Random Notes on the Dancer Framework</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/01/21/oh-my-love-lyrics/">Oh My Love Lyrics</a>
@@ -578,10 +594,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
     
       <li class="post">
         <a href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model/">Catalyst 5.8 the Perl MVC Framework Notes&#8211;Creating a Database Model</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes/">Catalyst 5.8 the Perl MVC Framework Notes</a>
       </li>
     
   </ul>
