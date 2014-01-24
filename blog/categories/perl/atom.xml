@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Perl | Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/blog/categories/perl/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-23T12:44:09+08:00</updated>
+  <updated>2014-01-24T16:45:13+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Notes on Effective Perl Programming]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/23/notes-on-effective-perl-programming/"/>
+    <updated>2014-01-23T19:47:56+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/23/notes-on-effective-perl-programming</id>
+    <content type="html"><![CDATA[<ol>
+<li><p>如果担心原先的程序启用strict后运行不正常， 则可以在实际修改代码前， 先在命令行上试着启用strict看看：  <br/>
+<code>
+perl -Mstrict program.pl
+</code></p></li>
+<li><p>所谓列表， 就是一组有序的标量集合。 所谓数组， 就是一个存储着列表的变量. 对于数组， 我们可以将它放在标量上下文中计算， 但对于列表， 则没有相应的概念。而列表永远只是列表， 它没有标量解释。</p></li>
+<li><p>逗号操作符在标量上下文中会返回最右边的元素。  所以 my $scalar = (&lsquo;aa&rsquo;, &lsquo;bb&rsquo;, &lsquo;cc&rsquo;) 会将cc赋给$scalar.</p></li>
+<li><p>在标量上下文环境中的列表赋值操作， 会返回负值操作符右边的元素个数。</p></li>
+<li><p>my $elements = my @array = localtime; 使用这种方法可以计算下某个操作生成的列表中有几个元素。 由于这个规则是右结合的， 所以实际上中间被赋值的列表可以是空列表： <br/>
+my $elements = () = local time;  如果要统计全局匹配的个数， 或者split函数返回的结果有多少个元素， 可以利用这个特性。</p></li>
+</ol>
+
+
+<p>```
+my $count = () = m/(&hellip;)/g;</p>
+
+<p>my $count = () = split /:/, $line;</p>
+
+<p>```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Notes on Perl]]></title>
