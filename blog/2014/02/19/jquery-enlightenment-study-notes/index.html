@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>怎可妄想 - Steven Sun's Blog</title>
+  <title>Jquery Enlightenment Study Notes 1 - Steven Sun's Blog</title>
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="一个人不成熟的标志， 或许就是， 有的东西明知不属于自己， 却还痴心妄想， 可笑， 可悲， 可叹.
-">
+  <meta name="description" content="The central concept behind jQuery is, &ldquo;find something, do something.&rdquo; More specifically, select DOM element(s) from an HTML document and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://shpeacelover.github.io/blog/2013/09/05/zen-ke-wang-xiang">
+  <link rel="canonical" href="http://shpeacelover.github.io/blog/2014/02/19/jquery-enlightenment-study-notes">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Steven Sun's Blog" type="application/atom+xml">
@@ -69,7 +68,7 @@
   
   <header>
     
-      <h1 class="entry-title">怎可妄想</h1>
+      <h1 class="entry-title">Jquery Enlightenment Study Notes 1</h1>
     
     
       <p class="meta">
@@ -85,14 +84,25 @@
   
 
 
-<time datetime="2013-09-05T11:12:00+08:00" pubdate data-updated="true">Sep 5<span>th</span>, 2013</time>
+<time datetime="2014-02-19T20:14:00+08:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>一个人不成熟的标志， 或许就是， 有的东西明知不属于自己， 却还痴心妄想， 可笑， 可悲， 可叹.</p>
+<div class="entry-content"><ol>
+<li>The central concept behind jQuery is, &ldquo;find something, do something.&rdquo; More specifically, select DOM element(s) from an HTML document and then do something with them using jQuery methods.</li>
+<li>Also we can extend the concept behind jQuery to include,  first creating something new, selecting it, then doing something with it.</li>
+<li>Executing code when the DOM is ready, but before window.onload.</li>
+<li>Make sure all stylesheets are included before your jQuery code. Doing so will make sure all the elements in the DOM are correctly rendered before jQuery begins executing code.</li>
+<li>Typically we do not want to wait for the window.onload event. That is the point of using a custom event like ready() that will execute code before window loads, but after the DOM is ready to be traversed and manipulated.</li>
+<li>In fact, placing all JavaScript code at the bottom of a page is a proven performance strategy.</li>
+<li>When attaching events to DOM elements contained in a wrapper set, the keyword this can be used to refer to the current DOM element invoking the event.</li>
+<li>$(&lsquo;a&rsquo;).get(0).title = &lsquo;jQuery.com&rsquo;; found become this: $(&lsquo;a&rsquo;)[0].title = &lsquo;jQuery.com&rsquo;; Both allow access to the actual DOM element. For the square bracket notation, it i</li>
+<li>s faster because it uses native JavaScript to retrieve the element from an array, instead of passing it to a method.</li>
+</ol>
+
 </div>
 
 
@@ -115,12 +125,12 @@
   
 
 
-<time datetime="2013-09-05T11:12:00+08:00" pubdate data-updated="true">Sep 5<span>th</span>, 2013</time>
+<time datetime="2014-02-19T20:14:00+08:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/think/'>Think</a>
+    <a class='category' href='/blog/categories/jquery/'>jQuery</a>
   
 </span>
 
@@ -129,7 +139,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shpeacelover.github.io/blog/2013/09/05/zen-ke-wang-xiang/" data-via="" data-counturl="http://shpeacelover.github.io/blog/2013/09/05/zen-ke-wang-xiang/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shpeacelover.github.io/blog/2014/02/19/jquery-enlightenment-study-notes/" data-via="" data-counturl="http://shpeacelover.github.io/blog/2014/02/19/jquery-enlightenment-study-notes/" >Tweet</a>
   
   
   
@@ -138,10 +148,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/09/04/qi-ji-yin-qiao-zhi-vimpi-pei-gua-hao/" title="Previous Post: 奇技淫巧之vim匹配括号">&laquo; 奇技淫巧之vim匹配括号</a>
+        <a class="basic-alignment left" href="/blog/2014/02/11/python-for-data-analysis-part01/" title="Previous Post: Python for Data Analysis part01">&laquo; Python for Data Analysis part01</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/09/07/some-useful-macos-commands/" title="Next Post: some useful macos commands">some useful macos commands &raquo;</a>
       
     </p>
   </footer>

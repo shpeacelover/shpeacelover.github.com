@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-01-24T16:45:13+08:00</updated>
+  <updated>2014-02-21T14:29:15+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Jquery Enlightenment Study Notes 1]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/02/19/jquery-enlightenment-study-notes/"/>
+    <updated>2014-02-19T20:14:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/02/19/jquery-enlightenment-study-notes</id>
+    <content type="html"><![CDATA[<ol>
+<li>The central concept behind jQuery is, &ldquo;find something, do something.&rdquo; More specifically, select DOM element(s) from an HTML document and then do something with them using jQuery methods.</li>
+<li>Also we can extend the concept behind jQuery to include,  first creating something new, selecting it, then doing something with it.</li>
+<li>Executing code when the DOM is ready, but before window.onload.</li>
+<li>Make sure all stylesheets are included before your jQuery code. Doing so will make sure all the elements in the DOM are correctly rendered before jQuery begins executing code.</li>
+<li>Typically we do not want to wait for the window.onload event. That is the point of using a custom event like ready() that will execute code before window loads, but after the DOM is ready to be traversed and manipulated.</li>
+<li>In fact, placing all JavaScript code at the bottom of a page is a proven performance strategy.</li>
+<li>When attaching events to DOM elements contained in a wrapper set, the keyword this can be used to refer to the current DOM element invoking the event.</li>
+<li>$(&lsquo;a&rsquo;).get(0).title = &lsquo;jQuery.com&rsquo;; found become this: $(&lsquo;a&rsquo;)[0].title = &lsquo;jQuery.com&rsquo;; Both allow access to the actual DOM element. For the square bracket notation, it i</li>
+<li>s faster because it uses native JavaScript to retrieve the element from an array, instead of passing it to a method.</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Python for Data Analysis Part01]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/02/11/python-for-data-analysis-part01/"/>
+    <updated>2014-02-11T14:53:02+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/02/11/python-for-data-analysis-part01</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Notes on Effective Perl Programming 3]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/24/notes-on-effective-perl-programming-3/"/>
+    <updated>2014-01-24T21:32:57+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/24/notes-on-effective-perl-programming-3</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Notes on Effective Perl Programming 2]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/01/24/notes-on-effective-perl-programming-2/"/>
+    <updated>2014-01-24T17:09:35+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/01/24/notes-on-effective-perl-programming-2</id>
+    <content type="html"><![CDATA[<ol>
+<li>循环while的条件语句是标量上下文环境， 而foreach的条件语句则是列表上下文环境。</li>
+<li>当我们调用某个子程序或使用某个操作符时， 没有提供保存或使用其返回结果的目标时， 就是空上下文（void context）。</li>
+<li>在子程序中， shift 操作会默认用@_作为参数。 在子程序之外， shift会把@ARGV作为默认参数。</li>
+<li>在标量上下文中， grep返回符合条件的元素个数， 而不是元素列表。</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Notes on Effective Perl Programming]]></title>
@@ -349,149 +402,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 <li><p>ftp_fget</p></li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[忧郁的心情]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/08/24/you-yu-de-xin-qing/"/>
-    <updated>2013-08-24T18:46:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/08/24/you-yu-de-xin-qing</id>
-    <content type="html"><![CDATA[<p>忧郁， 毫无斗志。怎么好像每周都有那么会儿啊！要自强不息啊！</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Oop in PHP]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/08/23/oop-in-php/"/>
-    <updated>2013-08-23T20:47:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/08/23/oop-in-php</id>
-    <content type="html"><![CDATA[<p>1.&nbsp;define a class with function and parameters</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>class classname
-</span><span class='line'>    {
-</span><span class='line'>    function operation1()
-</span><span class='line'>    {
-</span><span class='line'>    }
-</span><span class='line'>    function operation2($param1, $param2)
-</span><span class='line'>    {
-</span><span class='line'>    }
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>2.&nbsp;constructor</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?php
-</span><span class='line'>class classname
-</span><span class='line'>{
-</span><span class='line'>  function __construct($param)
-</span><span class='line'>  {
-</span><span class='line'>    echo "Constructor called with parameter ".$param."&lt;br /&gt;";
-</span><span class='line'>  }
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>$a = new classname("First");
-</span><span class='line'>$b = new classname("Second");
-</span><span class='line'>$c = new classname();
-</span><span class='line'>?&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>3.&nbsp;class attribute</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>class classname
-</span><span class='line'>{
-</span><span class='line'>public $attribute;
-</span><span class='line'>}
-</span><span class='line'>$a = new classname();
-</span><span class='line'>$a-&gt;attribute = "value";
-</span><span class='line'>echo $a-&gt;attribute;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>4.&nbsp; When you use this keyword &ldquo;final&rdquo; in front of a function declaration, that function cannot be overridden in any subclasses</p>
-
-<p>5.&nbsp; PHP use &ldquo;interface&rdquo; to implement the function of &ldquo;multi inheritance&rdquo;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>interface Displayable
-</span><span class='line'>{
-</span><span class='line'>    function display();
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>class webPage implements Displayable
-</span><span class='line'>{
-</span><span class='line'>    function display()
-</span><span class='line'>{
-</span><span class='line'>// ...
-</span><span class='line'>}
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Some Random Notes About Life and Work]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/08/21/some-random-notes-about-life-and-work/"/>
-    <updated>2013-08-21T10:51:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/08/21/some-random-notes-about-life-and-work</id>
-    <content type="html"><![CDATA[<p>Spent a lot of time last night and this morning to midify the theme of my blog to make it looks better without success.
-What a shame!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Text Encoding and Transformation in PHP]]></title>
-    <link href="http://shpeacelover.github.io/blog/2013/08/19/text-encoding-and-transformation-in-php/"/>
-    <updated>2013-08-19T19:36:00+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2013/08/19/text-encoding-and-transformation-in-php</id>
-    <content type="html"><![CDATA[<p>GET: urlencode/rawurlencode</p>
-
-<p>links: htmlspecialchars</p>
-
-<p>SQL: addslashes/stripslashes</p>
-
-<p>HTML: htmlentities, strip_tags, nl2br;</p>
 ]]></content>
   </entry>
   

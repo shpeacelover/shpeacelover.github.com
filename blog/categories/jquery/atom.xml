@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: jQuery | Steven Sun's Blog]]></title>
+  <link href="http://shpeacelover.github.io/blog/categories/jquery/atom.xml" rel="self"/>
+  <link href="http://shpeacelover.github.io/"/>
+  <updated>2014-02-21T14:29:15+08:00</updated>
+  <id>http://shpeacelover.github.io/</id>
+  <author>
+    <name><![CDATA[Steven Sun]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Jquery Enlightenment Study Notes 1]]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/02/19/jquery-enlightenment-study-notes/"/>
+    <updated>2014-02-19T20:14:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/02/19/jquery-enlightenment-study-notes</id>
+    <content type="html"><![CDATA[<ol>
+<li>The central concept behind jQuery is, &ldquo;find something, do something.&rdquo; More specifically, select DOM element(s) from an HTML document and then do something with them using jQuery methods.</li>
+<li>Also we can extend the concept behind jQuery to include,  first creating something new, selecting it, then doing something with it.</li>
+<li>Executing code when the DOM is ready, but before window.onload.</li>
+<li>Make sure all stylesheets are included before your jQuery code. Doing so will make sure all the elements in the DOM are correctly rendered before jQuery begins executing code.</li>
+<li>Typically we do not want to wait for the window.onload event. That is the point of using a custom event like ready() that will execute code before window loads, but after the DOM is ready to be traversed and manipulated.</li>
+<li>In fact, placing all JavaScript code at the bottom of a page is a proven performance strategy.</li>
+<li>When attaching events to DOM elements contained in a wrapper set, the keyword this can be used to refer to the current DOM element invoking the event.</li>
+<li>$(&lsquo;a&rsquo;).get(0).title = &lsquo;jQuery.com&rsquo;; found become this: $(&lsquo;a&rsquo;)[0].title = &lsquo;jQuery.com&rsquo;; Both allow access to the actual DOM element. For the square bracket notation, it i</li>
+<li>s faster because it uses native JavaScript to retrieve the element from an array, instead of passing it to a method.</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>

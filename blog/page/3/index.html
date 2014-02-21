@@ -9,7 +9,8 @@
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="ctrl+w+(w, h, j, k,l) ctrl+b, ctrl+w, gg&nbsp;&nbsp;移到整份文件的最上方 G&nbsp;&nbsp;移到整份文件的最下方 H&nbsp;&nbsp;移动到当前屏幕的最上方 L&nbsp;&nbsp;移动到当前屏幕的最下方 ds&#8221;& &hellip;">
+  <meta name="description" content="忧郁， 毫无斗志。怎么好像每周都有那么会儿啊！要自强不息啊！
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +66,257 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/24/you-yu-de-xin-qing/">忧郁的心情</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-24T18:46:00+08:00" pubdate data-updated="true">Aug 24<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>忧郁， 毫无斗志。怎么好像每周都有那么会儿啊！要自强不息啊！</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/23/oop-in-php/">Oop in PHP</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-23T20:47:00+08:00" pubdate data-updated="true">Aug 23<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>1.&nbsp;define a class with function and parameters</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class classname
+</span><span class='line'>    {
+</span><span class='line'>    function operation1()
+</span><span class='line'>    {
+</span><span class='line'>    }
+</span><span class='line'>    function operation2($param1, $param2)
+</span><span class='line'>    {
+</span><span class='line'>    }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2.&nbsp;constructor</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?php
+</span><span class='line'>class classname
+</span><span class='line'>{
+</span><span class='line'>  function __construct($param)
+</span><span class='line'>  {
+</span><span class='line'>    echo "Constructor called with parameter ".$param."&lt;br /&gt;";
+</span><span class='line'>  }
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>$a = new classname("First");
+</span><span class='line'>$b = new classname("Second");
+</span><span class='line'>$c = new classname();
+</span><span class='line'>?&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>3.&nbsp;class attribute</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class classname
+</span><span class='line'>{
+</span><span class='line'>public $attribute;
+</span><span class='line'>}
+</span><span class='line'>$a = new classname();
+</span><span class='line'>$a-&gt;attribute = "value";
+</span><span class='line'>echo $a-&gt;attribute;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>4.&nbsp; When you use this keyword &ldquo;final&rdquo; in front of a function declaration, that function cannot be overridden in any subclasses</p>
+
+<p>5.&nbsp; PHP use &ldquo;interface&rdquo; to implement the function of &ldquo;multi inheritance&rdquo;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>interface Displayable
+</span><span class='line'>{
+</span><span class='line'>    function display();
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>class webPage implements Displayable
+</span><span class='line'>{
+</span><span class='line'>    function display()
+</span><span class='line'>{
+</span><span class='line'>// ...
+</span><span class='line'>}
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/21/some-random-notes-about-life-and-work/">Some Random Notes About Life and Work</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-21T10:51:00+08:00" pubdate data-updated="true">Aug 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Spent a lot of time last night and this morning to midify the theme of my blog to make it looks better without success.
+What a shame!</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/19/text-encoding-and-transformation-in-php/">Text Encoding and Transformation in PHP</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-19T19:36:00+08:00" pubdate data-updated="true">Aug 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>GET: urlencode/rawurlencode</p>
+
+<p>links: htmlspecialchars</p>
+
+<p>SQL: addslashes/stripslashes</p>
+
+<p>HTML: htmlentities, strip_tags, nl2br;</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -406,7 +658,7 @@ git merge &mdash;log development</p>
     <section>
   <h1>Category</h1>
   <ul id="categories">
-    <li><a href='/blog/categories/blog'>Blog</a></li><li><a href='/blog/categories/catalyst'>Catalyst</a></li><li><a href='/blog/categories/dancer'>Dancer</a></li><li><a href='/blog/categories/life'>Life</a></li><li><a href='/blog/categories/mac'>Mac</a></li><li><a href='/blog/categories/perl'>Perl</a></li><li><a href='/blog/categories/php'>PHP</a></li><li><a href='/blog/categories/think'>Think</a></li><li><a href='/blog/categories/vim-emacs'>vim_emacs</a></li>
+    <li><a href='/blog/categories/blog'>Blog</a></li><li><a href='/blog/categories/catalyst'>Catalyst</a></li><li><a href='/blog/categories/dancer'>Dancer</a></li><li><a href='/blog/categories/jquery'>jQuery</a></li><li><a href='/blog/categories/life'>Life</a></li><li><a href='/blog/categories/mac'>Mac</a></li><li><a href='/blog/categories/perl'>Perl</a></li><li><a href='/blog/categories/php'>PHP</a></li><li><a href='/blog/categories/python'>Python</a></li><li><a href='/blog/categories/think'>Think</a></li><li><a href='/blog/categories/vim-emacs'>vim_emacs</a></li>
   </ul>
 </section>
 <section>
@@ -414,23 +666,23 @@ git merge &mdash;log development</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/02/19/jquery-enlightenment-study-notes/">Jquery Enlightenment Study Notes 1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/11/python-for-data-analysis-part01/">Python for Data Analysis Part01</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/24/notes-on-effective-perl-programming-3/">Notes on Effective Perl Programming 3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/24/notes-on-effective-perl-programming-2/">Notes on Effective Perl Programming 2</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/23/notes-on-effective-perl-programming/">Notes on Effective Perl Programming</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/23/some-random-notes-on-the-dancer-framework/">Some Random Notes on the Dancer Framework</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/21/oh-my-love-lyrics/">Oh My Love Lyrics</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/15/yaml-exception-reading-errors/">Yaml Exception Reading Errors</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/14/catalyst-manual-tutorial-notes/">Catalyst Manual Tutorial Notes</a>
       </li>
     
   </ul>

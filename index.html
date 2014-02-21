@@ -9,8 +9,7 @@
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="如果担心原先的程序启用strict后运行不正常， 则可以在实际修改代码前， 先在命令行上试着启用strict看看： 1
-perl -Mstrict program.pl 所谓列表， 就是一组有序的标量集合。 所谓数组， 就是一个存储着列表的变量. 对于数组， 我们可以将它放在标量上下文中计算， &hellip;">
+  <meta name="description" content="The central concept behind jQuery is, &ldquo;find something, do something.&rdquo; More specifically, select DOM element(s) from an HTML document and &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +65,167 @@ perl -Mstrict program.pl 所谓列表， 就是一组有序的标量集合。 �
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/19/jquery-enlightenment-study-notes/">Jquery Enlightenment Study Notes 1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-19T20:14:00+08:00" pubdate data-updated="true">Feb 19<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ol>
+<li>The central concept behind jQuery is, &ldquo;find something, do something.&rdquo; More specifically, select DOM element(s) from an HTML document and then do something with them using jQuery methods.</li>
+<li>Also we can extend the concept behind jQuery to include,  first creating something new, selecting it, then doing something with it.</li>
+<li>Executing code when the DOM is ready, but before window.onload.</li>
+<li>Make sure all stylesheets are included before your jQuery code. Doing so will make sure all the elements in the DOM are correctly rendered before jQuery begins executing code.</li>
+<li>Typically we do not want to wait for the window.onload event. That is the point of using a custom event like ready() that will execute code before window loads, but after the DOM is ready to be traversed and manipulated.</li>
+<li>In fact, placing all JavaScript code at the bottom of a page is a proven performance strategy.</li>
+<li>When attaching events to DOM elements contained in a wrapper set, the keyword this can be used to refer to the current DOM element invoking the event.</li>
+<li>$(&lsquo;a&rsquo;).get(0).title = &lsquo;jQuery.com&rsquo;; found become this: $(&lsquo;a&rsquo;)[0].title = &lsquo;jQuery.com&rsquo;; Both allow access to the actual DOM element. For the square bracket notation, it i</li>
+<li>s faster because it uses native JavaScript to retrieve the element from an array, instead of passing it to a method.</li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/11/python-for-data-analysis-part01/">Python for Data Analysis Part01</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-11T14:53:02+08:00" pubdate data-updated="true">Feb 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/24/notes-on-effective-perl-programming-3/">Notes on Effective Perl Programming 3</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-24T21:32:57+08:00" pubdate data-updated="true">Jan 24<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content">
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/24/notes-on-effective-perl-programming-2/">Notes on Effective Perl Programming 2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-24T17:09:35+08:00" pubdate data-updated="true">Jan 24<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ol>
+<li>循环while的条件语句是标量上下文环境， 而foreach的条件语句则是列表上下文环境。</li>
+<li>当我们调用某个子程序或使用某个操作符时， 没有提供保存或使用其返回结果的目标时， 就是空上下文（void context）。</li>
+<li>在子程序中， shift 操作会默认用@_作为参数。 在子程序之外， shift会把@ARGV作为默认参数。</li>
+<li>在标量上下文中， grep返回符合条件的元素个数， 而不是元素列表。</li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -384,205 +544,6 @@ my eyes can see.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes/">Catalyst 5.8 the Perl MVC Framework Notes</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-11T12:33:25+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ol>
-<li><p>catalyst.pl MyApp    (this command will create the app)</p></li>
-<li><p>Inside the lib directory, there is a file named MyApp.pm, This file defines the namespace and inheritance that are necessary to make this a Catalyst application. It also contains the list of plugins to load application-­specific configurations. These configurations can also be defined in the myapp.conf file in the MyApp directory. However, if the same configuration is mentioned in both the files, then the configuration mentioned here takes precedence.</p></li>
-<li>The file lib/MyApp/Controller/Root.pm will handle all root level (/)URLs. This is where the code that generates the welcome page is located.</li>
-<li>The root directory will hold your templates and other non-­code support files. A subdirectory called /root/static is for static content such as images and stylesheets. Catalyst is set up to serve static files from this directory automatically (under the /static path), thanks toCatalyst::Plugin::Static::Simple.</li>
-<li>The script directory contains the scripts needed to run, test, and modify your application. To note here, the script myapp_create.pl, which is a version of catalyst.pl that&rsquo;s customized for your application. It can create Models, Views, Controllers, tests, and many other things.</li>
-<li><p>The t directory is where your application&rsquo;s automatic tests are stored. By default, you&rsquo;ll have the following three tests:</p>
-
-<ul>
-<li>01app.t, which is a test that passes if your application compiles.</li>
-<li>02pod.t, which will pass if your Plain Old Documentation (POD)embedded API documentation, inside your application, is valid.</li>
-<li>03podcoverage.t, which tests that every public function in your application has some documentation.</li>
-</ul>
-</li>
-<li><p>When a user makes a request using the browser, Catalyst will look for the appropriate method that can handle the request within packages called Controllers.</p></li>
-<li><p>In a controller, there are some automatically created stuff. &ldquo;BEGIN {extends &lsquo;Catalyst::Controller&rsquo;; }&rdquo; is to tell Moose/Perl that this module is a Catalyst Controller. &ldquo;<strong>PACKAGE</strong>&ndash;>meta->make_immutable&rdquo; ells Moose that this module will not change at runtime. This statement is necessary for performance gains and is good practice to mention in every Moose module. Modules must return true when they&rsquo;re loaded,otherwise Perl will assume that the loading has failed and will die with an error message. 1 is always true, so it&rsquo;s conventional to use it for this purpose.</p></li>
-<li>To create a view, we can issue the following command, &lsquo;perl script/myapp_create.pl view TT TT&rsquo;. The TT TT part of the previous command means to create a View called View/TT.pm (the first TT) based on the standard Catalyst::View::TT (the second TT).  For our example, The next step is to create a template in the root/hello directory.We will name it index.tt. The root directory is the default place where Catalyst::View::TT will look for templates. This can be changed by configuration if you really need to.</li>
-<li>Variables that are passed between Controllers and Views are called stash.</li>
-<li>For the &ldquo;sub index&rdquo; part in a controller, if we change it to &ldquo;sub index :Path :Args(1)&rdquo;, it will accept the argument after index. The :Path attribute after index tells Catalyst that this method will handle URL requests that do not mention the method name such as /hello. The Args(1) attribute declares that this action expects one argument.</li>
-<li>If we specified :Local instead of :Path, then Catalyst would map the index action to handle a URL that looks like /hello/index. So, the URL looks like the following <a href="http://localhost/hello/index/Bonjour!,">http://localhost/hello/index/Bonjour!,</a> where Bonjour! is the argument that is being passed to the Controller. If we omitted the attributes (:Local, :Path, and so on), Catalyst would ignore the action entirely and it would be a normal Perl subroutine in the package. If we want to handle any URL with this method, then we can use the :Global attribute.</li>
-<li><p>We also changed the first line of the hello subroutine to receive the parameter within the method. Initially, it looked like  <br/>
-my ( $self, $c ) = @<em>;.  <br/>
-This gets the first two arguments passed to the action by Catalyst, $self and $c. $self is a MyApp::Controller::Hello object and is not of much use right now. $c is the Catalyst context and contains all the information about our application and the current request (and therefore is very useful). Catalyst passes more than just $self and$c though, so we want to modify that line to read
-my ($self, $c, @args)=@</em>;.
-This will allow us to access the rest of the arguments via the @args array.</p></li>
-<li><p>The template that will be rendered is determined by the private name of your action.</p></li>
-<li><p>The stash is a data structure that exists throughout a single Catalyst request. Data you insert into the stash in an action will be available to the View (and other actions). Templates can only access variables that have been explicitly placed here, so it&rsquo;s important to remember to put your useful data in the stash (otherwise it will be gone at the end of the subroutine in the Controller, instead of at the end of the request).</p></li>
-<li><p>You can automatically restart the server when necessary by running the server like     <br/>
-perl script/myapp_server.pl -r -d.  <br/>
-The -r will cause the server to restart when appropriate, and the -d will show debugging information, even if you&rsquo;ve turned it off inside your application. This is especially useful as you will want to deactivate the hardcoded -Debug option in your MyApp.pm, once you are ready to deploy your application.</p></li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/09/notes-on-perl/">Notes on Perl</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-09T21:41:24+08:00" pubdate data-updated="true">Jan 9<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ol>
-<li>为了查看某一个模块的版本号， 在命令行下输入以下的内容： <br/>
-perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/09/new-year-resolution/">New Year&#8217;s Resolution</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-09T20:33:07+08:00" pubdate data-updated="true">Jan 9<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>好久没有对未来做些规划了。 总觉得日子就这样过吧。 也懒得去做些什么大的改变了。</p>
-
-<p>总是在各种技术间跳来跳去， 没有熟练任何一种技术。 玩过Perl， Python， Ruby， Shell Script， PHP， Lisp。 但是真正在公司的服务器上部署过的代码只有用PHP还有Shell Script写的代码。</p>
-
-<p>在我刚来公司的时候， 是想从事perl的代码的编写的工作。 但是自从进入公司后， 自己在Perl上花的时间实在是微乎其微的。</p>
-
-<p>以至于自己都有点迷失方向了， 不知道该给自己立下什么目标。</p>
-
-<p>在自己入职刚一年的时候， manager跟我说， 以后或许可以从事L2方面的工作， 即专职从事代码编写的工作， 当然也得写rule。 前提肯定是自己能证明有能力去做这件事情了。虽然现在自己也有大把的时候可以进行coding， 但是毕竟还是L1. 自己负责的那些PHP代码只有偶尔需要改动。</p>
-
-<p>学了好几天的Catalyst了。 现在我要下定决心把Perl的两个框架给学好， 一个是Catalyst， 一个是Dancer。 这两个框架公司里都有用到的。但是感觉挺难的， 而我的那个L1的同事竟然说Dancer挺容易的。 我是有多蠢啊！！！！</p>
-
-<p>2014年， 希望自己在工作上能够有如下的进步。
-1. 在Perl上能稍微有点成绩。 毕竟从知道有perl这门语言到现在都已经有两年多了。 现在还是这么菜的水平， 完全说不过去的。
-2. 彻底掌握Catalyst还有Dancer这两个框架。
-3. 对于PHP， 因为基本上公司用的框架就在那里了， 希望在新的一年里能够在扎实下PHP代码编写的技巧。
-4. 入职满两年的时候希望能够有底气跟manager说我想转到L2去。
-5. 每天写技术博客， 或长或短， 记录下每天学到什么新的技术。 那样或许长进会更快点的。
-6. 有不懂的刻苦钻研或者向同事请教。</p>
-
-<p>好吧， 就写这么多了。 希望能好好审视下自己今天写下的这些东西。</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/07/when-can-we-omit-the-ampersand-while-calling-a-subroutine/">When Can We Omit the Ampersand While Calling a Subroutine</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-07T16:39:30+08:00" pubdate data-updated="true">Jan 7<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>If the compiler sees the subroutine definition before invocation, or if Perl can tell from the syntax that it’s a subroutine call, the subroutine can be called without an ampersand, just like a built-in function.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -596,7 +557,7 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
     <section>
   <h1>Category</h1>
   <ul id="categories">
-    <li><a href='/blog/categories/blog'>Blog</a></li><li><a href='/blog/categories/catalyst'>Catalyst</a></li><li><a href='/blog/categories/dancer'>Dancer</a></li><li><a href='/blog/categories/life'>Life</a></li><li><a href='/blog/categories/mac'>Mac</a></li><li><a href='/blog/categories/perl'>Perl</a></li><li><a href='/blog/categories/php'>PHP</a></li><li><a href='/blog/categories/think'>Think</a></li><li><a href='/blog/categories/vim-emacs'>vim_emacs</a></li>
+    <li><a href='/blog/categories/blog'>Blog</a></li><li><a href='/blog/categories/catalyst'>Catalyst</a></li><li><a href='/blog/categories/dancer'>Dancer</a></li><li><a href='/blog/categories/jquery'>jQuery</a></li><li><a href='/blog/categories/life'>Life</a></li><li><a href='/blog/categories/mac'>Mac</a></li><li><a href='/blog/categories/perl'>Perl</a></li><li><a href='/blog/categories/php'>PHP</a></li><li><a href='/blog/categories/python'>Python</a></li><li><a href='/blog/categories/think'>Think</a></li><li><a href='/blog/categories/vim-emacs'>vim_emacs</a></li>
   </ul>
 </section>
 <section>
@@ -604,23 +565,23 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/02/19/jquery-enlightenment-study-notes/">Jquery Enlightenment Study Notes 1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/11/python-for-data-analysis-part01/">Python for Data Analysis Part01</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/24/notes-on-effective-perl-programming-3/">Notes on Effective Perl Programming 3</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/24/notes-on-effective-perl-programming-2/">Notes on Effective Perl Programming 2</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/01/23/notes-on-effective-perl-programming/">Notes on Effective Perl Programming</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/23/some-random-notes-on-the-dancer-framework/">Some Random Notes on the Dancer Framework</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/21/oh-my-love-lyrics/">Oh My Love Lyrics</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/15/yaml-exception-reading-errors/">Yaml Exception Reading Errors</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/14/catalyst-manual-tutorial-notes/">Catalyst Manual Tutorial Notes</a>
       </li>
     
   </ul>
