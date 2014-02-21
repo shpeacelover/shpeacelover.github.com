@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Some Random Notes About Life and Work - Steven Sun's Blog</title>
+  <title>Notes on 'Practical Programming' - Steven Sun's Blog</title>
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="Spent a lot of time last night and this morning to midify the theme of my blog to make it looks better without success.
-What a shame!
-">
+  <meta name="description" content="In Python, print will add a new line automatically.
+Python loads modules only the first time they are imported. Internally, Python keeps track of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ What a shame!
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://shpeacelover.github.io/blog/2013/08/21/some-random-notes-about-life-and-work">
+  <link rel="canonical" href="http://shpeacelover.github.io/blog/2014/02/21/notes-on-practical-programming">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Steven Sun's Blog" type="application/atom+xml">
@@ -70,7 +69,7 @@ What a shame!
   
   <header>
     
-      <h1 class="entry-title">Some Random Notes About Life and Work</h1>
+      <h1 class="entry-title">Notes on 'Practical Programming'</h1>
     
     
       <p class="meta">
@@ -86,15 +85,28 @@ What a shame!
   
 
 
-<time datetime="2013-08-21T10:51:00+08:00" pubdate data-updated="true">Aug 21<span>st</span>, 2013</time>
+<time datetime="2014-02-21T14:30:48+08:00" pubdate data-updated="true">Feb 21<span>st</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Spent a lot of time last night and this morning to midify the theme of my blog to make it looks better without success.
-What a shame!</p>
+<div class="entry-content"><ol>
+<li><p>In Python, print will add a new line automatically.</p></li>
+<li><p>Python loads modules only the first time they are imported. Internally, Python keeps track of the modules it has already seen; when it is asked to load one that’s already in that list, it just skips over it. This saves time and will be particularly important when you start writing modules that import other modules, which in turn import other modules—if Python didn’t keep track of what was already in memory, it could wind up loading commonly used modules like math dozens of times.</p></li>
+<li>When Python imports a module, it sets that module’s <strong>name</strong> variable to be the name of the module, rather than the special string &ldquo;<strong>main</strong>&rdquo;. This means that a module can tell whether it is the main program:   <br/>
+ <code>
+if __name__ == "__main__":  print "I am the main program"else:  print "Someone is importing me"    
+</code></li>
+<li>Lists are mutable;</li>
+<li>If we loop through a list, the variable is left holding its last value when the loop finishes.</li>
+<li>For Python&rsquo;s built in function open, the result of open is not the contents of the file. Instead, open returns a file object whose methods allow the program to access the contents ofthe file.</li>
+<li>Read reads the whole file, readline reads the next line of text from the file.</li>
+<li>string.strip, which returns a copy of a string that has leading and trailing whitespace characters (spaces, tabs, and newlines) stripped away.</li>
+<li>deadlines will read the lines of the file and store them in a list.</li>
+</ol>
+
 </div>
 
 
@@ -117,12 +129,12 @@ What a shame!</p>
   
 
 
-<time datetime="2013-08-21T10:51:00+08:00" pubdate data-updated="true">Aug 21<span>st</span>, 2013</time>
+<time datetime="2014-02-21T14:30:48+08:00" pubdate data-updated="true">Feb 21<span>st</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/think/'>Think</a>
+    <a class='category' href='/blog/categories/python/'>Python</a>
   
 </span>
 
@@ -131,7 +143,7 @@ What a shame!</p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shpeacelover.github.io/blog/2013/08/21/some-random-notes-about-life-and-work/" data-via="" data-counturl="http://shpeacelover.github.io/blog/2013/08/21/some-random-notes-about-life-and-work/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://shpeacelover.github.io/blog/2014/02/21/notes-on-practical-programming/" data-via="" data-counturl="http://shpeacelover.github.io/blog/2014/02/21/notes-on-practical-programming/" >Tweet</a>
   
   
   
@@ -140,10 +152,8 @@ What a shame!</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/08/19/text-encoding-and-transformation-in-php/" title="Previous Post: text encoding and transformation in PHP">&laquo; text encoding and transformation in PHP</a>
+        <a class="basic-alignment left" href="/blog/2014/02/19/jquery-enlightenment-study-notes/" title="Previous Post: jquery enlightenment study notes 1">&laquo; jquery enlightenment study notes 1</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/08/23/oop-in-php/" title="Next Post: oop in PHP">oop in PHP &raquo;</a>
       
     </p>
   </footer>

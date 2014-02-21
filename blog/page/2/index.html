@@ -9,8 +9,8 @@
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="catalyst.pl MyApp (this command will create the app)
-Inside the lib directory, there is a file named MyApp.pm, This file defines the namespace and &hellip;">
+  <meta name="description" content="The command for creating a database model is as the following: 1
+perl script/myapp_create.pl model TestDatabase DBIC::Schema MyApp::Schema:: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,56 @@ Inside the lib directory, there is a file named MyApp.pm, This file defines the 
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model/">Catalyst 5.8 the Perl MVC Framework Notes&#8211;Creating a Database Model</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-11T16:24:03+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ol>
+<li>The command for creating a database model is as the following:</li>
+</ol>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>perl script/myapp_create.pl model TestDatabase DBIC::Schema MyApp::Schema::TestDatabase create=dynamic dbi:SQLite:tmp/database</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<ol>
+<li>The first argument is the name of the Catalyst Model (TestDatabase). DBIC::Schema is what sort of model we&rsquo;re creating. MyApp::Schema::TestDatabase is where the schema definition will be stored (we won&rsquo;t use the Schema in this example, but real applications will). create=dynamic tells DBIC to read the database every time theapplication is started to determine the schema (layout of tables, foreign key relations, and so on.). The final argument is the DBI connect string for the database.</li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -478,49 +528,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/08/28/network-and-protocol-functions-in-php/">Network and Protocol Functions in PHP</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-08-28T14:08:00+08:00" pubdate data-updated="true">Aug 28<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ol>
-<li><p>file_get_contents($url);</p></li>
-<li><p>urlencode() function.This function takes a string and converts it to the proper format for an URL</p></li>
-<li><p>parse_url($url)</p></li>
-<li><p>gethostbyname</p></li>
-<li><p>ftp_fget</p></li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -544,6 +551,10 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/02/21/notes-on-practical-programming/">Notes on &#8216;Practical Programming&#8217;</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/19/jquery-enlightenment-study-notes/">Jquery Enlightenment Study Notes 1</a>
       </li>
     
@@ -557,10 +568,6 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
     
       <li class="post">
         <a href="/blog/2014/01/24/notes-on-effective-perl-programming-2/">Notes on Effective Perl Programming 2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/23/notes-on-effective-perl-programming/">Notes on Effective Perl Programming</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Python | Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-02-21T14:29:15+08:00</updated>
+  <updated>2014-02-21T20:12:42+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Notes on 'Practical Programming']]></title>
+    <link href="http://shpeacelover.github.io/blog/2014/02/21/notes-on-practical-programming/"/>
+    <updated>2014-02-21T14:30:48+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2014/02/21/notes-on-practical-programming</id>
+    <content type="html"><![CDATA[<ol>
+<li><p>In Python, print will add a new line automatically.</p></li>
+<li><p>Python loads modules only the first time they are imported. Internally, Python keeps track of the modules it has already seen; when it is asked to load one that’s already in that list, it just skips over it. This saves time and will be particularly important when you start writing modules that import other modules, which in turn import other modules—if Python didn’t keep track of what was already in memory, it could wind up loading commonly used modules like math dozens of times.</p></li>
+<li>When Python imports a module, it sets that module’s <strong>name</strong> variable to be the name of the module, rather than the special string &ldquo;<strong>main</strong>&rdquo;. This means that a module can tell whether it is the main program:   <br/>
+ <code>
+if __name__ == "__main__":  print "I am the main program"else:  print "Someone is importing me"    
+</code></li>
+<li>Lists are mutable;</li>
+<li>If we loop through a list, the variable is left holding its last value when the loop finishes.</li>
+<li>For Python&rsquo;s built in function open, the result of open is not the contents of the file. Instead, open returns a file object whose methods allow the program to access the contents ofthe file.</li>
+<li>Read reads the whole file, readline reads the next line of text from the file.</li>
+<li>string.strip, which returns a copy of a string that has leading and trailing whitespace characters (spaces, tabs, and newlines) stripped away.</li>
+<li>deadlines will read the lines of the file and store them in a list.</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Python for Data Analysis Part01]]></title>

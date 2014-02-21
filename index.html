@@ -9,7 +9,8 @@
   <meta name="author" content="Steven Sun">
 
   
-  <meta name="description" content="The central concept behind jQuery is, &ldquo;find something, do something.&rdquo; More specifically, select DOM element(s) from an HTML document and &hellip;">
+  <meta name="description" content="In Python, print will add a new line automatically.
+Python loads modules only the first time they are imported. Internally, Python keeps track of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +66,56 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/02/21/notes-on-practical-programming/">Notes on &#8216;Practical Programming&#8217;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-02-21T14:30:48+08:00" pubdate data-updated="true">Feb 21<span>st</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><ol>
+<li><p>In Python, print will add a new line automatically.</p></li>
+<li><p>Python loads modules only the first time they are imported. Internally, Python keeps track of the modules it has already seen; when it is asked to load one that’s already in that list, it just skips over it. This saves time and will be particularly important when you start writing modules that import other modules, which in turn import other modules—if Python didn’t keep track of what was already in memory, it could wind up loading commonly used modules like math dozens of times.</p></li>
+<li>When Python imports a module, it sets that module’s <strong>name</strong> variable to be the name of the module, rather than the special string &ldquo;<strong>main</strong>&rdquo;. This means that a module can tell whether it is the main program:   <br/>
+ <code>
+if __name__ == "__main__":  print "I am the main program"else:  print "Someone is importing me"    
+</code></li>
+<li>Lists are mutable;</li>
+<li>If we loop through a list, the variable is left holding its last value when the loop finishes.</li>
+<li>For Python&rsquo;s built in function open, the result of open is not the contents of the file. Instead, open returns a file object whose methods allow the program to access the contents ofthe file.</li>
+<li>Read reads the whole file, readline reads the next line of text from the file.</li>
+<li>string.strip, which returns a copy of a string that has leading and trailing whitespace characters (spaces, tabs, and newlines) stripped away.</li>
+<li>deadlines will read the lines of the file and store them in a list.</li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -494,56 +545,6 @@ my eyes can see.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/11/catalyst-5-dot-8-the-perl-mvc-framework-notes-creating-a-database-model/">Catalyst 5.8 the Perl MVC Framework Notes&#8211;Creating a Database Model</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-11T16:24:03+08:00" pubdate data-updated="true">Jan 11<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><ol>
-<li>The command for creating a database model is as the following:</li>
-</ol>
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>perl script/myapp_create.pl model TestDatabase DBIC::Schema MyApp::Schema::TestDatabase create=dynamic dbi:SQLite:tmp/database</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<ol>
-<li>The first argument is the name of the Catalyst Model (TestDatabase). DBIC::Schema is what sort of model we&rsquo;re creating. MyApp::Schema::TestDatabase is where the schema definition will be stored (we won&rsquo;t use the Schema in this example, but real applications will). create=dynamic tells DBIC to read the database every time theapplication is started to determine the schema (layout of tables, foreign key relations, and so on.). The final argument is the DBI connect string for the database.</li>
-</ol>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -565,6 +566,10 @@ my eyes can see.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/02/21/notes-on-practical-programming/">Notes on &#8216;Practical Programming&#8217;</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/02/19/jquery-enlightenment-study-notes/">Jquery Enlightenment Study Notes 1</a>
       </li>
     
@@ -578,10 +583,6 @@ my eyes can see.</p>
     
       <li class="post">
         <a href="/blog/2014/01/24/notes-on-effective-perl-programming-2/">Notes on Effective Perl Programming 2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/23/notes-on-effective-perl-programming/">Notes on Effective Perl Programming</a>
       </li>
     
   </ul>
