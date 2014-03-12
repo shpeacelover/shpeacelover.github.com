@@ -4,7 +4,7 @@
   <title><![CDATA[Steven Sun's Blog]]></title>
   <link href="http://shpeacelover.github.io/atom.xml" rel="self"/>
   <link href="http://shpeacelover.github.io/"/>
-  <updated>2014-02-21T20:12:42+08:00</updated>
+  <updated>2014-03-12T13:24:32+08:00</updated>
   <id>http://shpeacelover.github.io/</id>
   <author>
     <name><![CDATA[Steven Sun]]></name>
@@ -53,24 +53,6 @@ if __name__ == "__main__":  print "I am the main program"else:  print "Someone i
 <li>s faster because it uses native JavaScript to retrieve the element from an array, instead of passing it to a method.</li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Python for Data Analysis Part01]]></title>
-    <link href="http://shpeacelover.github.io/blog/2014/02/11/python-for-data-analysis-part01/"/>
-    <updated>2014-02-11T14:53:02+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2014/02/11/python-for-data-analysis-part01</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Notes on Effective Perl Programming 3]]></title>
-    <link href="http://shpeacelover.github.io/blog/2014/01/24/notes-on-effective-perl-programming-3/"/>
-    <updated>2014-01-24T21:32:57+08:00</updated>
-    <id>http://shpeacelover.github.io/blog/2014/01/24/notes-on-effective-perl-programming-3</id>
-    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
@@ -409,6 +391,31 @@ perl -MSome::Module -e &lsquo;print Some::Module->VERSION&rsquo;</li>
 <li><p>an action is composed from an operator followed by a motion.</p></li>
 </ol>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Network and Protocol Functions in PHP]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/08/28/network-and-protocol-functions-in-php/"/>
+    <updated>2013-08-28T14:08:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/08/28/network-and-protocol-functions-in-php</id>
+    <content type="html"><![CDATA[<ol>
+<li><p>file_get_contents($url);</p></li>
+<li><p>urlencode() function.This function takes a string and converts it to the proper format for an URL</p></li>
+<li><p>parse_url($url)</p></li>
+<li><p>gethostbyname</p></li>
+<li><p>ftp_fget</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[忧郁的心情]]></title>
+    <link href="http://shpeacelover.github.io/blog/2013/08/24/you-yu-de-xin-qing/"/>
+    <updated>2013-08-24T18:46:00+08:00</updated>
+    <id>http://shpeacelover.github.io/blog/2013/08/24/you-yu-de-xin-qing</id>
+    <content type="html"><![CDATA[<p>忧郁， 毫无斗志。怎么好像每周都有那么会儿啊！要自强不息啊！</p>
 ]]></content>
   </entry>
   
